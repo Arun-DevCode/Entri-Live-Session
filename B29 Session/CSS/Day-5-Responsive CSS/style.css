@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-5,
+.box-6,
+.box-4 {
+  background-color: black;
+  color: white;
+  /* width: 100px; */
+  /* height: 100px; */
+}
+
+.wrapper {
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 200px);
+  grid-auto-rows: 200px;
+  justify-content: center;
+  align-content: center;
+  padding: 35px;
+  /* height: 100%; */
+}
+/* Mobile & Above Screen*/
+@media (642px < width) {
+  .grid-container {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+/*Desktop Screen*/
+
+@media (1024px < width) {
+  .grid-container {
+    grid-template-columns: repeat(4, 200px);
+  }
+}

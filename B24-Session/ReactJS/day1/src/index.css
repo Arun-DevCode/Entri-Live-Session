@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --background-primary: #ffffff;
+  --background-secondary: #05073c;
+  --background-highlight: #eb662b;
+  --text-primary: #e2ad64;
+  --text-secondary: #e7e6e6;
+  --text-transparent: #fdf0ea;
+  --transparent: #717171;
+  --text-dark: #000000;
+  --text-gradient: #eb662b;
+  --text-dark-gradient: #101010;
+  --text-minmal-primary: #757575;
+}
+
+@theme {
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-highlight: var(--background-highlight);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-transparent: var(--text-transparent);
+  --color-transparent: var(--text-dark);
+  --color-text-dark: var(--text-gradient);
+  --color-text-gradient: var(--text-dark-gradient);
+  --color-text-dark-gradient: var(--text-minmal-primary);
+
+  /*Font Customization*/
+  --font-primary: "Inter";
+}
+
+/*Layer - component*/
+@layer components {
+  .btn-primary {
+    @apply bg-[#eb662b] px-5 py-2.5 rounded-lg text-white font-medium text-lg;
+  }
+}

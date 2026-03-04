@@ -1,0 +1,8 @@
+Git commends 
+
+1. git init - initialized
+2. git add filename or folder name or entirefolder(. dot)
+3. git status - check status of tracker
+
+
+https://new-chat-yqbb.bolt.host
