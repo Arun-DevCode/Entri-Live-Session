@@ -6,6 +6,7 @@ import RegisterPage from "../pages/RegisterPage";
 import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
 import RouteProtected from "./RouteProtected";
+import CreateTaskForm from "../components/TaskForm";
 
 //App Router
 const AppRouter = createBrowserRouter([
@@ -24,6 +25,10 @@ const AppRouter = createBrowserRouter([
         <DashboardPage />
       </RouteProtected>
     ),
+  },
+  {
+    path: "/create-task",
+    Component: CreateTaskForm,
   },
   {
     path: "*",

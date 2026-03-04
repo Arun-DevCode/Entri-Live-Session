@@ -34,7 +34,7 @@ export const createUserAccount = async (req, res) => {
     const newUser = await UserModel.insertOne({
       name: name,
       email: email,
-      role: "USER",
+      role,
       password: hashedPassword,
     });
 

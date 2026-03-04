@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 //Actions
 import { getAllTasks } from "../api/tasks";
@@ -24,7 +25,16 @@ const TaskDashboard = () => {
           <h1 className="text-xl font-semibold text-gray-700">Task Overview</h1>
         </div>
 
-        <SearchBar />
+        <div className="flex items-center justify-between w-full">
+          <SearchBar />
+          <Link
+            to={"/create-task"}
+            className="bg-blue-800 text-white font-medium px-5 py-2.5 rounded-sm hover:shadow hover:bg-blue-700"
+          >
+            Create task +
+          </Link>
+        </div>
+
         {/* Task Grid (The 4x2 Layout) */}
         <TaskList taskData={tasks} />
       </div>
