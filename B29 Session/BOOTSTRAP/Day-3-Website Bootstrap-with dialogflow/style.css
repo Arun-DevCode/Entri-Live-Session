@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #fefcfb;
+}
+/* Header Section */
+.btn-orange {
+  background-color: orangered;
+}
+
+.text-orange {
+  color: orangered;
+}
+
+.border-orange {
+  border: 1px solid orangered;
+}
+
+.title {
+  font-size: 65px;
+  font-family: "Poppins", Volkhov;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.image-container {
+  width: 45rem;
+}
