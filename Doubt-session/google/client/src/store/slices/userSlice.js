@@ -3,9 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 // Initial State
 const initialState = {
   data: {
-    fullName: "",
-    email: "",
-    password: "",
+    ID: "",
+    Username: "",
+    Email: "",
+    Password: "",
+    PhoneNumber: "",
+    CreatedAt: "",
   },
 };
 

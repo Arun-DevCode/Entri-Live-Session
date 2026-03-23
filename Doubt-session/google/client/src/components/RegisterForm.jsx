@@ -1,21 +1,29 @@
 import { useDispatch, useSelector } from "react-redux";
-import { CreateAccount } from "../api/user";
+import { createAccount } from "../api/user";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 
+// Helper functions
+import getTodayDate from "../utils/getDate";
+
 // Action
 import { createUserAccount } from "../store/slices/userSlice";
+import getRandomUId from "../utils/getRandomId";
 
 function RegisterForm() {
+  const date = getTodayDate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      fullName: "",
-      email: "",
-      password: "",
+      ID: getRandomUId(),
+      Username: "",
+      Email: "",
+      Password: "",
+      PhoneNumber: "",
+      CreatedAt: date,
     },
   });
 
@@ -31,7 +39,7 @@ function RegisterForm() {
   // Form Submission
   const FormSubmission = async (data) => {
     // API CALL : Mock API
-    const res = await CreateAccount(data);
+    const res = await createAccount(data);
     if (!res) {
       alert("Failed to store Create User Account!");
     }
@@ -59,8 +67,8 @@ function RegisterForm() {
         </label>
         <input
           type="text"
-          name="fullName"
-          {...register("fullName", {
+          name="Username"
+          {...register("Username", {
             required: {
               value: true,
               message: "full name is required!",
@@ -84,11 +92,29 @@ function RegisterForm() {
         </label>
         <input
           type="email"
-          name="email"
-          {...register("email", {
+          name="Email"
+          {...register("Email", {
             required: {
               value: true,
               message: "Email is required!",
+            },
+          })}
+          placeholder="name@company.com"
+          class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-200"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-600 mb-1">
+          Phone
+        </label>
+        <input
+          type="tel"
+          name="PhoneNumber"
+          {...register("PhoneNumber", {
+            required: {
+              value: true,
+              message: "Phone Number is required!",
             },
           })}
           placeholder="name@company.com"
@@ -102,8 +128,8 @@ function RegisterForm() {
         </label>
         <input
           type="password"
-          name="password"
-          {...register("password", {
+          name="Password"
+          {...register("Password", {
             required: {
               value: true,
               message: "Password is required!",

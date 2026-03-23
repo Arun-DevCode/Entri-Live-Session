@@ -1,19 +1,26 @@
-const URL = `https://69a7ed0b37caab4b8c6019b9.mockapi.io/users`;
+const URL = `https://api.sheety.co/162f493f4e3d1d0bfa8954bc380cf62b/recipeFinderApp/accounts`; // GET
 
-// To Create User Account
-export const CreateAccount = async (UserData) => {
-  const res = await fetch(URL, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(UserData),
-  });
+// Create User Account
+export const createAccount = async (userData) => {
+  const body = {
+    account: userData,
+  };
 
-  // conversions
-  const data = await res.json(); // JSON -> Object
+  try {
+    const res = await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
 
-  return data;
+    const data = await res.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error creating account:", error);
+  }
 };
 
 // To Login User to authenticate (Verify)

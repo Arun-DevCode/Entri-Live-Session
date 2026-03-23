@@ -1,12 +1,11 @@
-import Country from "./Components/Country";
-import City from "./Components/City";
-import Search from "./Components/Search";
+import Feedback from "./Components/feedback";
+import FeedbackForm from "./Components/Feedbackform";
 
 function App() {
   return (
     <div>
       {/* <Country /> */}
-      <Search />
+      <FeedbackForm />
     </div>
   );
 }
