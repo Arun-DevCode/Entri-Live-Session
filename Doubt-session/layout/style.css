@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  padding: 1.05rem;
+  /* background-color: black; */
+}
+nav {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  column-gap: 2.5rem;
+}
+
+.signup {
+  height: 3em;
+  width: 8em;
+  border: none;
+  border-radius: 10em;
+  background: #016dd9;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+  margin-block: 2.5rem;
+}
+
+.Hero-Container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0.75rem;
+  display: flex;
+}
+
+.primary-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.25rem;
+}
+
+.primary-content {
+  max-width: 80%;
+}
+
+.primary-content h1 {
+  font-size: 4rem;
+}
+
+.primary-content p {
+  font-size: 1.5rem;
+}
+
+.cta-group {
+  display: flex;
+  column-gap: 1.75rem;
+}
+.cta-group .explore {
+  height: 3em;
+  width: 8em;
+  border: none;
+  border-radius: 0.25rem;
+  background: #016dd9;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+}
+.cta-group .watch {
+  height: 3em;
+  width: 8em;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 17px;
+  color: black;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+img{
+    box-shadow:-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+  width: 40rem;
+}
