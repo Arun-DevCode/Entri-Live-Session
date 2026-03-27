@@ -1,14 +1,19 @@
-const express = require('express');
+const express = require("express");
+const logger = require("morgan");
 
-// Import Routers
-const userRouter = require("./src/routers/user.route")
-const productRouter = require("./src/routers/product.route")
+//Import routers
+const UserRouter = require("./src/routers/user.route");
+
+// App Config
 const app = express();
 
-// Use Routers
-app.use(userRouter)
-app.use(productRouter)
+// middleware
+app.use(express.json());
+app.use(logger("dev"));
+app.use(UserRouter);
 
-app.listen(3000,()=>{console.log('Server is running on port 3000')})
+app.listen(3000, () => {
+  console.log("Server is running on port");
+});
 
 // http://localhost:3000/register
