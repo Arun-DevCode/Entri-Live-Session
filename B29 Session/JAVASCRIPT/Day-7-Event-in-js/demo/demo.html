@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Events Demo</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+        text-align: center;
+        line-height: 100px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Mouse Events</h2>
+    <div class="box" id="mouseBox">Hover / Click Me</div>
+
+    <h2>Form Events</h2>
+    <form id="myForm">
+      <input type="text" id="nameInput" placeholder="Type your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Keyboard Events</h2>
+    <input type="text" id="keyboardInput" placeholder="Type something" />
+
+    <h2>Window Events</h2>
+    <p>Resize or scroll the page</p>
+
+    <script>
+      // --------------------
+      // Mouse Events
+      // --------------------
+      const box = document.getElementById("mouseBox");
+
+      box.addEventListener("click", () => {
+        console.log("Clicked");
+      });
+
+      box.addEventListener("dblclick", () => {
+        console.log("Double Clicked");
+      });
+
+      box.addEventListener("mouseover", () => {
+        box.style.background = "orange";
+        console.log("Mouse Over");
+      });
+
+      box.addEventListener("mouseout", () => {
+        box.style.background = "lightblue";
+        console.log("Mouse Out");
+      });
+
+      // --------------------
+      // Form Events
+      // --------------------
+      const form = document.getElementById("myForm");
+      const input = document.getElementById("nameInput");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("Form Submitted:", input.value);
+      });
+
+      input.addEventListener("change", () => {
+        console.log("Input Changed:", input.value);
+      });
+
+      input.addEventListener("input", () => {
+        console.log("Typing:", input.value);
+      });
+
+      // --------------------
+      // Keyboard Events
+      // --------------------
+      const keyboardInput = document.getElementById("keyboardInput");
+
+      keyboardInput.addEventListener("keydown", (e) => {
+        console.log("Key Down:", e.key);
+      });
+
+      keyboardInput.addEventListener("keyup", (e) => {
+        console.log("Key Up:", e.key);
+      });
+
+      // --------------------
+      // Window Events
+      // --------------------
+      window.addEventListener("load", () => {
+        console.log("Page Loaded");
+      });
+
+      window.addEventListener("resize", () => {
+        console.log("Window Resized:", window.innerWidth);
+      });
+
+      window.addEventListener("scroll", () => {
+        console.log("Scrolling...");
+      });
+    </script>
+  </body>
+</html>
