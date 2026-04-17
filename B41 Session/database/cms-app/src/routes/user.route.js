@@ -1,15 +1,10 @@
 const UserRouter = require("express").Router();
 const Account = require("../models/user.model");
 
+// Import:controller
+const userController = require("../controller/user.controller");
+
 // Define Routes
-UserRouter.post("/sign-up", async (req, res) => {
-  // User Data
-  const { name, email, password } = req.body;
-
-  //store in db
-  const newUser = await Account.insertOne(req.body);
-
-  res.json({ message: "Account created success", data: newUser });
-});
+UserRouter.post("/sign-up", userController.createAccount);
 
 module.exports = UserRouter;

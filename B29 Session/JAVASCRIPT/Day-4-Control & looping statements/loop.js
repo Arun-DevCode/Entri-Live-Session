@@ -76,3 +76,66 @@
 // }
 
 // userslist.forEach(findUser);
+
+let arr = [1, 2, 3, 4];
+
+let isNumberExists = false;
+
+arr.forEach((value, index) => {
+    console.log(value)
+  if (value === 4) {
+    console.log("Worked!")
+    isNumberExists = true;
+  }
+});
+
+console.log(isNumberExists?"Given exists":"Not available");
+
+
+// No.Of.Subject = 10,20,30 by prompt
+// Avg of score = sum of subject-score / total of subject;
+// const result = 42% === 35 to 42% === 50 -> "Grade B"
+// console.log(result); // Grade B
+
+
+//for..in loop statement
+const person = {
+  name : "test-user",
+  age : 1,
+  isCompletedTest : true
+};
+
+
+/*
+  syntax : 
+   
+  for(){
+    
+  }
+*/
+let key
+for(key in person){
+  console.log(person[key]);
+}
+
+
+const personKeys = ["name","age","isCompletedTest"];
+// 1 . name
+// 2. age
+// 3. isCompletedTest
+
+// const key = "name"
+
+
+
+// for ...of loop statement
+
+// 1 of them.
+// const arr = [1,2,3]
+
+for(let arrVal of arr){
+  if(arrVal == 2){
+   break;
+  }
+  console.log(arrVal);
+};

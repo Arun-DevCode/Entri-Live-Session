@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiVision | Premium Precision Lenses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .lens-gradient {
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold tracking-tighter text-blue-600">
+          OPTI<span class="text-slate-800">VISION</span>
+        </div>
+        <div
+          class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide"
+        >
+          <a href="#" class="hover:text-blue-600 transition">Lenses</a>
+          <a href="#" class="hover:text-blue-600 transition">Technology</a>
+          <a href="#" class="hover:text-blue-600 transition">Sustainability</a>
+        </div>
+        <button
+          class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200"
+        >
+          Book Consultation
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <span
+            class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-4 uppercase tracking-widest"
+            >Precision Engineering</span
+          >
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            See the world in <span class="text-blue-600">Ultra-HD.</span>
+          </h1>
+          <p class="text-lg text-slate-600 mb-8 max-w-md">
+            Custom-crafted lenses designed for your digital lifestyle.
+            Anti-glare, blue-light filtering, and scratch-resistant technology.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#lead-gen"
+              class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition"
+              >Start Lens Finder</a
+            >
+            <a
+              href="#"
+              class="flex items-center gap-2 px-8 py-4 font-bold text-slate-700 hover:text-blue-600 transition"
+            >
+              <i class="fa-solid fa-play text-sm"></i> Watch Technology
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute -z-10 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-50 top-0 right-0"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&q=80&w=800"
+            alt="Lens Detail"
+            class="rounded-3xl shadow-2xl border-8 border-white"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Generation Form Section -->
+    <section id="lead-gen" class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <div
+          class="bg-slate-900 rounded-[2rem] p-8 md:p-16 shadow-2xl relative overflow-hidden"
+        >
+          <div class="relative z-10 grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-4">
+                Request a Callback
+              </h2>
+              <p class="text-slate-400 mb-8">
+                Unsure about your prescription? Our expert opticians will guide
+                you through the best lens options for your vision.
+              </p>
+              <ul class="space-y-4 text-slate-300">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-blue-400"></i> Free vision
+                  analysis
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-blue-400"></i> Price match
+                  guarantee
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-blue-400"></i> Call back
+                  within 15 minutes
+                </li>
+              </ul>
+            </div>
+
+            <form class="bg-white p-8 rounded-2xl space-y-4 shadow-xl">
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-500 uppercase mb-1"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  placeholder="John Doe"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-500 uppercase mb-1"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  placeholder="+1 (555) 000-0000"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-500 uppercase mb-1"
+                  >Interest</label
+                >
+                <select
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                >
+                  <option>Blue Light Protection</option>
+                  <option>Progressive Lenses</option>
+                  <option>Daily Contacts</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <button
+                class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition mt-4 shadow-lg shadow-blue-100"
+              >
+                Get Your Free Quote
+              </button>
+            </form>
+          </div>
+          <!-- Background Decorative Circle -->
+          <div
+            class="absolute -bottom-24 -left-24 w-64 h-64 border-[40px] border-white/5 rounded-full"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="text-3xl font-bold">Our Lens Catalog</h2>
+          <p class="text-slate-500">Engineered for clarity and comfort.</p>
+        </div>
+        <a
+          href="#"
+          class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1"
+          >View All</a
+        >
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Product Card -->
+        <div class="group cursor-pointer">
+          <div
+            class="relative overflow-hidden rounded-2xl bg-slate-200 mb-4 aspect-square flex items-center justify-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1591076482161-421a3aaee5f3?auto=format&fit=crop&q=80&w=400"
+              class="group-hover:scale-110 transition duration-500"
+            />
+            <div
+              class="absolute top-3 right-3 bg-white px-2 py-1 rounded text-[10px] font-bold uppercase"
+            >
+              Popular
+            </div>
+          </div>
+          <h3 class="font-bold text-lg">ClearShield Pro</h3>
+          <p class="text-slate-500 text-sm mb-2">Anti-Glare + UV400</p>
+          <p class="text-blue-600 font-bold">$129.00</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="group cursor-pointer">
+          <div
+            class="relative overflow-hidden rounded-2xl bg-slate-200 mb-4 aspect-square flex items-center justify-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&q=80&w=400"
+              class="group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <h3 class="font-bold text-lg">BlueFilter Lite</h3>
+          <p class="text-slate-500 text-sm mb-2">Digital Eye Strain Relief</p>
+          <p class="text-blue-600 font-bold">$89.00</p>
+        </div>
+
+        <!-- More cards would follow... -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100 py-12 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="text-xl font-bold mb-6">
+          OPTI<span class="text-blue-600">VISION</span>
+        </div>
+        <div class="flex justify-center space-x-6 text-slate-500 mb-8">
+          <a href="#" class="hover:text-blue-600">Privacy</a>
+          <a href="#" class="hover:text-blue-600">Terms</a>
+          <a href="#" class="hover:text-blue-600">Returns</a>
+          <a href="#" class="hover:text-blue-600">Store Locator</a>
+        </div>
+        <p class="text-slate-400 text-sm">
+          © 2024 Optivision Labs. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
