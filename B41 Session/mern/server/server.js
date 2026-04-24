@@ -1,9 +1,9 @@
 const server = require("./app");
 const connectWithDB = require("./src/config/db.config");
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 
 // env loader
-// dotenv.config();
+dotenv.config();
 
 // Server Port
 const PORT = 5000;

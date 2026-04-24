@@ -3,7 +3,9 @@ const db = require("mongoose");
 // Connection
 async function connectWithDB() {
   try {
-    const connection = await db.connect("mongodb://localhost:27017/Tasio-App");
+    const connection = await db.connect(
+      "mongodb+srv://senior_DbEngineer:jLVXKDgiKaCXBVkU@parkinglot-server.dwds62w.mongodb.net/cmSDB?appName=Parkinglot-Server",
+    );
     if (!connection) {
       throw new Error("failed to connect db!!");
     }

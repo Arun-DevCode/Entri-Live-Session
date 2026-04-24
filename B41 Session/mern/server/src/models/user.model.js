@@ -6,13 +6,13 @@ const AccountSchema = mongoose.Schema(
     name: String,
     email: String,
     password: String,
-    role: [String],
+    role: String, // admin , user
   },
   { timeStamp: true },
 );
 
 // MODAL : COLLECTION
-const Account = mongoose.model("accounts", AccountSchema);
+const Account = mongoose.model("users", AccountSchema);
 
 //indexing
 // Account.index({ email: 1 }); // single field
