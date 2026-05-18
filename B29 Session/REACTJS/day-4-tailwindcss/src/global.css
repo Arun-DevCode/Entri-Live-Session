@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/*------Theme Variables----*/
+/* @theme {
+  
+} */
+
+@utility bg-hero {
+  background-image: url("../public/Background.png");
+}
+
+/* @theme {
+  --bg-home: url("/images/Home/Background.png");
+} */
+
+/* @layer base {
+  .primary-btn {
+    @apply my-2.5 px-2.5 py-1.5 rounded capitalize text-white bg-black;
+  }
+} */
+
+/* @layer components {
+  .profile-card {
+    @apply border border-gray-200 shadow my-2.5 h-72 rounded;
+  }
+} */
+/* 
+@layer utilities {
+  .text-10xl {
+    font-size: 132px;
+  }
+} */
