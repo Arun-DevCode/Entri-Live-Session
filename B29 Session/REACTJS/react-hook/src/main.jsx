@@ -10,6 +10,8 @@ import Provider from "./context/Provider.jsx";
 import UserA from "./context/userA.jsx";
 import UserB from "./context/userB.jsx";
 import Demo from "./context/demo.jsx";
+import UsersPage from "./pages/UsersPage.jsx";
+import PostPage from "./pages/PostPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,11 +19,14 @@ createRoot(document.getElementById("root")).render(
     {/* <Counter /> */}
     {/* <Products /> */}
     {/* <CompA /> */}
-    <Provider>
+    {/* <Provider>
       <UserA />
       <UserB />
       <Demo />
       <Profile />
-    </Provider>
+    </Provider> */}
+
+    {/* <UsersPage /> */}
+    <PostPage />
   </StrictMode>,
 );
