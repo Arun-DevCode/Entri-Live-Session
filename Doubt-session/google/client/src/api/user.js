@@ -16,7 +16,7 @@ export const createAccount = async (userData) => {
     });
 
     const data = await res.json();
-
+    // response store into localstorage
     return data;
   } catch (error) {
     console.error("Error creating account:", error);
