@@ -9,7 +9,7 @@ const Account = require("../controllers/auth.controller");
 // Auth Routes
 authRouter.post("/register", Account);
 
-authRouter.get("/profile", (req, res) => {
+authRouter.get("/login", (req, res) => {
   res.json({ message: "User login Success" });
 });
 

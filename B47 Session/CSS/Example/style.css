@@ -1,0 +1,11 @@
+.btn {
+  padding-inline: 12px;
+  background-color: white;
+  border: 1px solid gray;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-background-color-red {
+  background-color: red;
+}

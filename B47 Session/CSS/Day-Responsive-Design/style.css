@@ -1,0 +1,31 @@
+/* body {
+  background-color: red;
+} */
+
+/* @media (min-width:600px) and (max-width:800px) {
+  body {
+    background-color: black;
+  }
+} */
+
+/* @media (600px <= width <=1024px) {
+  body {
+    background-color: black;
+  }
+} */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+section {
+  /* width: 180vw; */
+  /* width: 80%; */
+  /* margin: 0 auto; */
+  background-color: black;
+  color: white;
+  padding: 1em;
+  height: 80vh;
+}
