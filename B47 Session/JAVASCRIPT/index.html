@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to Javascript</h1>
+    <!--Javascript Code-->
+
+    <script>
+      // Primitive
+      var name = "varun"; // String
+      let age = 12; // Number
+      let isToday = true; // Boolean
+      var x; // return UNDEFINED
+      let futureDate = null; // null
+      var viewersCount = 100000000000000; // BigINT
+      // let customerId = Symbol(C1001); // Symbol - Unique
+
+      // Reference - Non-Primitive
+      let personDetails = {
+        name: "varn",
+        age: 12,
+      };
+
+      // const token = [1, 2, 3, 4, 5];
+      // console.log(token);
+      // console.log(personDetails);
+
+      // function calculator() {
+      //   // calculator
+      //   var a = 10;
+      //   var b = 20;
+      //   console.log(a + b);
+      // }
+      // calculator();
+
+      let a = 11;
+      let b = a;
+
+      b = 20;
+      // console.log(a);
+      // console.log(b);
+
+      const person = { name: "Raj", age: 12 };
+      const candidateInfo = structuredClone(person); // It won't assign value instead assign ADDRESS
+
+      person.name = "Varun";
+      candidateInfo.age = 24;
+      console.log("PERSON:", person);
+      console.log("Candidate : ", candidateInfo);
+    </script>
+  </body>
+</html>
