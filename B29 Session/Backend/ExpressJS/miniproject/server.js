@@ -1,21 +1,24 @@
 import Server from "./app.js";
 
-// DB : Connect
-import DBCONNECT from "./src/config/db.config.js";
+// Database Connection
+import DBConnect from "./src/config/db.config.js";
 
 const PORT = 4000;
 
-// Server config
 Server.listen(PORT, async () => {
   try {
-    const isConnected = await DBCONNECT();
-    if (isConnected) {
-      process.exit(1);
-      throw new Error("Status : Server is Disconnected!!");
+    const isConnected = await DBConnect();
+
+    if (!isConnected) {
+      throw new Error("Database connection failed.");
     }
 
-    console.log("Server is running..");
+    console.log("Database Connected");
+    console.log(`Server is running on http://localhost:${PORT}`);
   } catch (error) {
-    if (error) return console.log(error.message);
+    console.error(error.message);
+
+    // Stop the server if the database connection fails
+    process.exit(1);
   }
 });

@@ -2,9 +2,9 @@ import express from "express";
 
 // Import Routes
 // import AuthRouter from "./src/routes/auth.route.js";
-// import UserRouter from "./src/routes/user.route.js";
+import UserRouter from "./src/routes/user.route.js";
 // import BookingRouter from "./src/routes/booking.route.js";
-import ProductRouter from "./src/routes/product.route.js";
+// import ProductRouter from "./src/routes/product.route.js";
 
 // Import rate limiter
 import { globalLimiter, strictLimiter } from "./src/utils/ratelimiter.utils.js";
@@ -32,7 +32,7 @@ app.use(globalLimiter);
 // app.use("/api/booking", strictLimiter, BookingRouter);
 
 // Public Routes
-// app.use("/api/user", UserRouter);
-app.use("/api/product", ProductRouter);
+app.use("/api/auth", UserRouter);
+// app.use("/api/product", ProductRouter);
 
 export default app;
