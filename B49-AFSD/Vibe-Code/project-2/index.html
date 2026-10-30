@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LANGARD. — Luxury Landscape Architecture &amp; Garden Design</title>
+  <meta name="description" content="Langard is an architectural landscape and botanical design studio creating timeless, sustainable estates and private sanctuaries worldwide.">
+  
+  <!-- Google Fonts: Playfair Display for editorial luxury serif & Plus Jakarta Sans for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= TOP HEADER / NAVIGATION ================= -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="logo" aria-label="Langard Landscape Architecture">
+        LANGARD.
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#work" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="#journal" class="nav-link">Blog</a></li>
+        </ul>
+
+        <!-- Mobile-only Action Row -->
+        <div class="mobile-nav-actions mobile-only">
+          <a href="#contact" class="btn btn-primary mobile-cta">Get in touch ↗</a>
+        </div>
+      </nav>
+
+      <!-- Desktop Action & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-touch desktop-only">
+          Get in touch <span class="touch-arrow">↗</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navbar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-overlay"></div>
+      
+      <!-- Top Sub-Content inside Hero -->
+      <div class="container hero-top-container">
+        <!-- Top Left Tagline -->
+        <div class="hero-tagline-box">
+          <p class="hero-tagline">
+            Where Green Dreams Take <br>
+            Root &amp; Gardens Thrive.
+          </p>
+        </div>
+
+        <!-- Top Right Floating Preview Card -->
+        <div class="hero-floating-card">
+          <div class="floating-card-thumb">
+            <img 
+              src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=200&q=80" 
+              alt="Horticulturist tending estate shrubs"
+            >
+          </div>
+          <div class="floating-card-body">
+            <p class="floating-card-text">Transforming outdoor spaces into living works of art.</p>
+            <div class="floating-card-badge">
+              <span class="badge-stat">50k+</span>
+              <span class="badge-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Massive Grand Hero Title ("FLOURISH.") -->
+      <div class="hero-bottom-container">
+        <div class="container">
+          <div class="flourish-title-wrap">
+            <span class="crosshair crosshair-left">+</span>
+            <h1 class="hero-flourish-title">FLOURISH.</h1>
+            <span class="crosshair crosshair-right">+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: MANIFESTO & TICKER ================= -->
+    <section class="manifesto-section" id="about">
+      <div class="container manifesto-container">
+        <!-- Left Section Label -->
+        <div class="section-label-col">
+          <span class="section-badge">● ABOUT</span>
+        </div>
+
+        <!-- Right Manifesto Quote -->
+        <div class="manifesto-quote-col">
+          <blockquote class="manifesto-quote">
+            “We cultivate natural beauty with passion and precision. Every garden we touch tells a unique story of harmony between architecture and nature, crafting living spaces that inspire and endure for generations.”
+          </blockquote>
+          <p class="manifesto-studio-tag">— ARCHITECTURAL HORTICULTURE STUDIO</p>
+        </div>
+      </div>
+
+      <!-- Dynamic Infinite Marquee Ticker with Botanical Previews -->
+      <div class="marquee-wrapper" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-item">
+            <span class="marquee-text">LANDSCAPE</span>
+            <div class="marquee-thumb">
+              <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=200&q=80" alt="Landscape architect">
+            </div>
+            <span class="marquee-text">CREATION</span>
+            <div class="marquee-thumb">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=200&q=80" alt="Hands planting seedling">
+            </div>
+            <span class="marquee-text">LIVING ARCHITECTURE</span>
+            <div class="marquee-thumb">
+              <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=200&q=80" alt="Estate botanical haven">
+            </div>
+          </div>
+          <!-- Repeated for seamless infinite scroll -->
+          <div class="marquee-item">
+            <span class="marquee-text">LANDSCAPE</span>
+            <div class="marquee-thumb">
+              <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=200&q=80" alt="Landscape architect">
+            </div>
+            <span class="marquee-text">CREATION</span>
+            <div class="marquee-thumb">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=200&q=80" alt="Hands planting seedling">
+            </div>
+            <span class="marquee-text">LIVING ARCHITECTURE</span>
+            <div class="marquee-thumb">
+              <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=200&q=80" alt="Estate botanical haven">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: OUR SERVICES ================= -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <!-- Top Section Header -->
+        <div class="services-top-row">
+          <span class="section-badge">● SERVICES</span>
+          <h2 class="services-main-title">
+            OUR <br>
+            SERVICES
+          </h2>
+        </div>
+
+        <!-- Asymmetric Content: Left List & Right Showcase Photo -->
+        <div class="services-layout">
+          <!-- Left Column: Numbered Interactive Services -->
+          <div class="services-list">
+            <!-- Service 1 -->
+            <div class="service-item active" data-service="1">
+              <span class="service-number">01</span>
+              <div class="service-content">
+                <h3 class="service-name">● LANDSCAPE DESIGN</h3>
+                <p class="service-description">
+                  From initial concept to full implementation, we craft bespoke master plans tailored specifically to your terrain's natural microclimates, drainage patterns, and aesthetic vision.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-item" data-service="2">
+              <span class="service-number">02</span>
+              <div class="service-content">
+                <h3 class="service-name">● ESTATE GARDEN CARE</h3>
+                <p class="service-description">
+                  Dedicated horticultural management programs ensuring seasonal health, root vigor, precision pruning, and organic soil regeneration.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-item" data-service="3">
+              <span class="service-number">03</span>
+              <div class="service-content">
+                <h3 class="service-name">● HARDSCAPING &amp; WATER</h3>
+                <p class="service-description">
+                  Hand-chiseled natural stone terraces, tranquil reflecting pools, custom pathways, and integrated architectural masonry.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-item" data-service="4">
+              <span class="service-number">04</span>
+              <div class="service-content">
+                <h3 class="service-name">● BOTANICAL INSTALLATION</h3>
+                <p class="service-description">
+                  Careful sourcing and planting of mature specimen trees, native meadow perennials, and biodiversity-enriching flora.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Featured Large Photographic Showcase -->
+          <div class="services-media-col">
+            <div class="service-image-card">
+              <img 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80" 
+                alt="Gardener holding tender green sapling with rich organic soil"
+                class="service-feature-img"
+              >
+              <div class="service-image-caption">
+                <span>Sustainable Soil Cultivation</span>
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: DRONE PANORAMA BANNER ================= -->
+    <section class="panorama-section" aria-label="Estate Aerial Showcase">
+      <div class="panorama-img-wrap">
+        <img 
+          src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=1600&q=80" 
+          alt="Aerial view of rolling green estate garden terraces" 
+          class="panorama-img"
+        >
+        <div class="panorama-overlay"></div>
+      </div>
+      
+      <!-- Overlaid Minimalist Feature Bar -->
+      <div class="panorama-badges-bar">
+        <div class="container">
+          <div class="feature-pills-row">
+            <span class="pill-badge">+ Eco-Friendly Materials</span>
+            <span class="pill-badge">+ 15+ Years Mastery</span>
+            <span class="pill-badge">+ Sustainable Irrigation</span>
+            <span class="pill-badge">+ Award-Winning Studio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: OUR WORK / PORTFOLIO ================= -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <!-- Centered Work Header -->
+        <div class="work-header text-center">
+          <h2 class="work-title">[ OUR WORK ]</h2>
+          <p class="work-subtitle">SELECTED PROJECTS &amp; PRIVATE COMMISSIONS</p>
+        </div>
+
+        <!-- Asymmetric 4-Card Portfolio Grid -->
+        <div class="work-grid">
+          <!-- Project 1: Cotswolds Sanctuary -->
+          <article class="work-card card-tall" data-category="residential">
+            <div class="work-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+                alt="Architect standing in lush private botanical garden" 
+                class="work-img"
+              >
+            </div>
+            <div class="work-card-info">
+              <h3 class="work-project-name">Cotswolds Sanctuary</h3>
+              <span class="work-category">Residential Estate</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Botanical Haven -->
+          <article class="work-card" data-category="sustainable">
+            <div class="work-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" 
+                alt="Vibrant blooming botanical shrubs and stone border" 
+                class="work-img"
+              >
+            </div>
+            <div class="work-card-info">
+              <h3 class="work-project-name">Highland Botanical Haven</h3>
+              <span class="work-category">Sustainable Conservation</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Surrey Estate Vista -->
+          <article class="work-card" data-category="commercial">
+            <div class="work-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80" 
+                alt="Gardener looking over sweeping vineyard terraces" 
+                class="work-img"
+              >
+            </div>
+            <div class="work-card-info">
+              <h3 class="work-project-name">Surrey Estate Vista</h3>
+              <span class="work-category">Vineyard &amp; Masterplan</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Urban Micro-Ecosystem -->
+          <article class="work-card card-tall" data-category="sustainable">
+            <div class="work-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80" 
+                alt="Rows of organic saplings in biodegradable nursery pots" 
+                class="work-img"
+              >
+            </div>
+            <div class="work-card-info">
+              <h3 class="work-project-name">Urban Micro-Ecosystem</h3>
+              <span class="work-category">Rooftop &amp; Native Flora</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-pills-wrap">
+          <button class="cat-pill active" data-filter="all">All Projects</button>
+          <button class="cat-pill" data-filter="residential">Residential</button>
+          <button class="cat-pill" data-filter="commercial">Commercial</button>
+          <button class="cat-pill" data-filter="sustainable">Sustainable</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6: INCREDIBLE TEAM ================= -->
+    <section class="team-section" id="team">
+      <div class="container">
+        <!-- Section Header Row -->
+        <div class="team-header-row">
+          <div class="team-title-col">
+            <span class="section-badge">● OUR TEAM</span>
+            <h2 class="team-main-title">
+              INCREDIBLE <br>
+              TEAM
+            </h2>
+          </div>
+          <div class="team-desc-col">
+            <p class="team-description">
+              Our multidisciplinary studio brings together certified arborists, landscape architects, and organic horticulturists dedicated to architectural environmental harmony.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Team Member Cards -->
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card">
+            <div class="team-photo-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" 
+                alt="Arthur Sterling - Founder & Head of Design"
+                class="team-photo"
+              >
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Arthur Sterling</h3>
+              <span class="team-role">Founder &amp; Master Horticulturist</span>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card">
+            <div class="team-photo-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" 
+                alt="David Caldwell - Senior Botanical Architect"
+                class="team-photo"
+              >
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">David Caldwell</h3>
+              <span class="team-role">Senior Botanical Architect</span>
+            </div>
+          </div>
+
+          <!-- Member 3 (Featured with Active Badge) -->
+          <div class="team-card team-card-featured">
+            <div class="team-photo-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" 
+                alt="Julian Vance - Principal Landscape Architect"
+                class="team-photo"
+              >
+              <div class="team-active-badge">
+                <span class="badge-dot"></span>
+                <span>Julian Vance</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Julian Vance</h3>
+              <span class="team-role">Principal Landscape Architect</span>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-card">
+            <div class="team-photo-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+                alt="Elena Rostova - Native Flora Specialist"
+                class="team-photo"
+              >
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Elena Rostova</h3>
+              <span class="team-role">Native Flora &amp; Soil Specialist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 7: TESTIMONIALS ================= -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Header -->
+        <div class="test-header">
+          <span class="section-badge">● TESTIMONIALS</span>
+          <h2 class="test-main-title">
+            HAPPY CLIENT <br>
+            STORIES.
+          </h2>
+        </div>
+
+        <!-- Testimonial Cards Grid -->
+        <div class="test-grid">
+          <!-- Story 1 -->
+          <div class="test-card">
+            <div class="test-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="test-quote">
+              “Langard transformed our neglected Cotswolds grounds into a breathtaking private sanctuary. Their deep knowledge of indigenous flora and stone masonry was truly second to none.”
+            </blockquote>
+            <div class="test-author-row">
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" 
+                alt="Marcus Thorne" 
+                class="test-avatar"
+              >
+              <div class="test-author-meta">
+                <h4 class="test-author-name">Marcus Thorne</h4>
+                <span class="test-author-location">Cotswolds Country Estate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="test-card">
+            <div class="test-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="test-quote">
+              “The team worked seamlessly with our architects. Our Surrey villa garden has blossomed into a living masterpiece that continues to amaze us through every season.”
+            </blockquote>
+            <div class="test-author-row">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" 
+                alt="Vivienne Vance" 
+                class="test-avatar"
+              >
+              <div class="test-author-meta">
+                <h4 class="test-author-name">Vivienne Vance</h4>
+                <span class="test-author-location">Surrey Private Villa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 8: LATEST JOURNAL ================= -->
+    <section class="journal-section" id="journal">
+      <div class="container">
+        <!-- Header -->
+        <div class="journal-header-row">
+          <div class="journal-title-col">
+            <span class="section-badge">● JOURNAL</span>
+            <h2 class="journal-main-title">Latest Journal</h2>
+          </div>
+          <a href="#journal" class="journal-view-all">
+            Read all entries ↗
+          </a>
+        </div>
+
+        <!-- 3 Journal Articles -->
+        <div class="journal-grid">
+          <!-- Article 1 -->
+          <article class="journal-card">
+            <div class="journal-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" 
+                alt="Gardener holding bouquet of fresh yellow flowers" 
+                class="journal-img"
+              >
+            </div>
+            <div class="journal-card-body">
+              <h3 class="journal-headline">
+                <a href="#journal">The Art of Seasonal Pruning: Preparing Grounds for Spring</a>
+              </h3>
+              <time datetime="2026-03-12" class="journal-date">March 12, 2026</time>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="journal-card">
+            <div class="journal-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" 
+                alt="Historic brick cottage garden and glass greenhouse" 
+                class="journal-img"
+              >
+            </div>
+            <div class="journal-card-body">
+              <h3 class="journal-headline">
+                <a href="#journal">Designing Climate-Resilient Landscapes for Modern Living</a>
+              </h3>
+              <time datetime="2026-02-28" class="journal-date">February 28, 2026</time>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="journal-card">
+            <div class="journal-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" 
+                alt="Master gardener nurturing rare seedlings in nursery" 
+                class="journal-img"
+              >
+            </div>
+            <div class="journal-card-body">
+              <h3 class="journal-headline">
+                <a href="#journal">Top 10 Native Flora for Organic Pest &amp; Soil Resilience</a>
+              </h3>
+              <time datetime="2026-02-14" class="journal-date">February 14, 2026</time>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER & GIANT MASTHEAD ================= -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <!-- Top Columns -->
+      <div class="footer-columns-grid">
+        <!-- Studio Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">NAVIGATION</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Studio</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#work">Selected Works</a></li>
+            <li><a href="#team">Horticultural Team</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+        </div>
+
+        <!-- Practice Disciplines -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">DISCIPLINES</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Landscape Architecture</a></li>
+            <li><a href="#services">Estate Management</a></li>
+            <li><a href="#services">Artisanal Stonework</a></li>
+            <li><a href="#services">Water Sanctuary Design</a></li>
+            <li><a href="#services">Specimen Tree Planting</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Channels -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">CONNECT</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram ↗</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest ↗</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Locations & Inquiries -->
+        <div class="footer-col footer-col-wide">
+          <h4 class="footer-col-title">STUDIOS</h4>
+          <div class="studio-address-block">
+            <p><strong>London:</strong> 42 Kensington Church St, London W8 4DB</p>
+            <p><strong>New York:</strong> 180 Hudson Valley Rd, NY 12534</p>
+            <p class="footer-contact-link">
+              <a href="mailto:inquiries@langard.studio">inquiries@langard.studio</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Giant Full-Width LANGARD. Wordmark Masthead Card -->
+      <div class="giant-masthead-banner">
+        <h2 class="giant-masthead-text">LANGARD.</h2>
+      </div>
+
+      <!-- Bottom Copyright & Legal -->
+      <div class="footer-bottom-row">
+        <p class="copyright-text">&copy; 2026 LANGARD Landscape Architecture Studio. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#privacy">Privacy Policy</a>
+          <span class="divider">/</span>
+          <a href="#terms">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="main.js"></script>
+</body>
+</html>

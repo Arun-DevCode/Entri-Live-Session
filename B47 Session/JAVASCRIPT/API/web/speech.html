@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Speech Synthesis</title>
+  </head>
+  <body>
+    <textarea id="text" placeholder="Enter text..."></textarea>
+    <br /><br />
+
+    <button id="speakBtn">🔊 Speak</button>
+    <button id="stopBtn">⏹ Stop</button>
+
+    <script>
+      const text = document.getElementById("text");
+      const speakBtn = document.getElementById("speakBtn");
+      const stopBtn = document.getElementById("stopBtn");
+
+      speakBtn.addEventListener("click", () => {
+        const message = text.value;
+
+        if (!message.trim()) return;
+
+        const speech = new SpeechSynthesisUtterance(message);
+
+        speech.lang = "en-US";
+        speech.rate = 1;
+        speech.pitch = 1;
+        speech.volume = 1;
+
+        speechSynthesis.speak(speech);
+      });
+
+      stopBtn.addEventListener("click", () => {
+        speechSynthesis.cancel();
+      });
+    </script>
+  </body>
+</html>

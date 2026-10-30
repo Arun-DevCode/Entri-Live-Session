@@ -6,3 +6,9 @@ export async function fetchUsers() {
   console.log(data);
   return data;
 }
+
+export async function formSubmission(data) {
+  const form = await data.request.formData();
+  console.log(data.request.params);
+  console.log({ message: form.get("feedback"), rating: form.get("rating") });
+}

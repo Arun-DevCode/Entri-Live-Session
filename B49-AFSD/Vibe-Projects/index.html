@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ShopNest - Modern online destination for curated lifestyle essentials including premium fashion, smart electronics, and artisanal home decor."
+    />
+    <meta name="theme-color" content="#2563EB" />
+    <title>ShopNest | Curated Lifestyle, Fashion, Tech & Home Decor</title>
+
+    <!-- Google Fonts: Poppins (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icons (CDN) for crisp, accessible icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- =========================================================================
+       SECTION 1: NAVBAR (Semantic Header, Nav, CSS Hamburger, Search & Cart)
+       ========================================================================= -->
+    <header class="site-header">
+      <nav class="container navbar-container" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="#home" class="brand-logo" aria-label="ShopNest Home">
+          <span class="brand-icon"
+            ><i class="bi bi-shop-window" aria-hidden="true"></i
+          ></span>
+          <span>Shop<span class="brand-accent">Nest</span></span>
+        </a>
+
+        <!-- Mobile Header Action Controls (Visible on mobile screens) -->
+        <div class="mobile-header-actions">
+          <button
+            type="button"
+            class="mobile-search-toggle-btn"
+            id="mobile-search-toggle"
+            aria-label="Toggle mobile search bar"
+            aria-expanded="true"
+          >
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+          <a
+            href="#cart"
+            class="cart-button mobile-cart-btn"
+            aria-label="Shopping Cart containing 3 items"
+          >
+            <i class="bi bi-bag" aria-hidden="true"></i>
+            <span class="cart-badge" aria-hidden="true">3</span>
+          </a>
+          <label
+            for="nav-toggle"
+            class="navbar-toggler-btn"
+            aria-label="Open menu button"
+          >
+            <span class="toggler-line line-1"></span>
+            <span class="toggler-line line-2"></span>
+            <span class="toggler-line line-3"></span>
+          </label>
+        </div>
+
+        <!-- CSS-Only Hamburger Toggle Checkbox (No JavaScript Required) -->
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="navbar-toggle-checkbox"
+          aria-label="Toggle navigation menu"
+        />
+
+        <!-- Collapsible Navigation Menu -->
+        <div class="navbar-menu">
+          <ul class="navbar-nav">
+            <li><a href="#home" class="nav-link-custom active">Home</a></li>
+            <li><a href="#shop" class="nav-link-custom">Shop</a></li>
+            <li>
+              <a href="#categories" class="nav-link-custom">Categories</a>
+            </li>
+            <li><a href="#why-us" class="nav-link-custom">About</a></li>
+            <li><a href="#newsletter" class="nav-link-custom">Contact</a></li>
+          </ul>
+
+          <!-- Global Search Box (Desktop) & Cart Action Group -->
+          <div class="navbar-actions">
+            <form
+              class="nav-search-form global-search-form"
+              role="search"
+              id="desktop-search-form"
+              action="#shop"
+            >
+              <label for="site-search" class="visually-hidden"
+                >Search products</label
+              >
+              <div class="search-input-wrapper">
+                <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                <input
+                  type="search"
+                  id="site-search"
+                  class="search-input"
+                  placeholder="Search products, SKU, categories..."
+                  aria-label="Search ShopNest products"
+                  autocomplete="off"
+                  spellcheck="false"
+                  aria-autocomplete="list"
+                  aria-expanded="false"
+                  aria-controls="search-autocomplete-desktop"
+                />
+                <button
+                  type="button"
+                  class="search-clear-btn d-none"
+                  id="search-clear-desktop"
+                  aria-label="Clear search query"
+                >
+                  <i class="bi bi-x-circle-fill"></i>
+                </button>
+              </div>
+              <!-- Desktop Autocomplete Dropdown Container (Flush with Search Bar) -->
+              <div
+                class="search-autocomplete-dropdown"
+                id="search-autocomplete-desktop"
+                role="listbox"
+                aria-label="Product suggestions"
+                hidden
+              ></div>
+            </form>
+
+            <a
+              href="#cart"
+              class="cart-button desktop-cart-btn"
+              aria-label="Shopping Cart containing 3 items"
+            >
+              <i class="bi bi-bag" aria-hidden="true"></i>
+              <span class="cart-badge" aria-hidden="true">3</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Global Search Bar (Sticky header row on mobile devices) -->
+      <div class="mobile-search-container" id="mobile-search-container">
+        <div class="container">
+          <form
+            class="global-search-form mobile-search-form"
+            role="search"
+            id="mobile-search-form"
+            action="#shop"
+          >
+            <label for="mobile-site-search" class="visually-hidden"
+              >Search products</label
+            >
+            <div class="search-input-wrapper">
+              <i class="bi bi-search search-icon" aria-hidden="true"></i>
+              <input
+                type="search"
+                id="mobile-site-search"
+                class="search-input"
+                placeholder="Search products, SKU, categories..."
+                aria-label="Search ShopNest products"
+                autocomplete="off"
+                spellcheck="false"
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-controls="search-autocomplete-mobile"
+              />
+              <button
+                type="button"
+                class="search-clear-btn d-none"
+                id="search-clear-mobile"
+                aria-label="Clear search query"
+              >
+                <i class="bi bi-x-circle-fill"></i>
+              </button>
+            </div>
+            <!-- Mobile Autocomplete Dropdown Container (Flush with Search Bar) -->
+            <div
+              class="search-autocomplete-dropdown"
+              id="search-autocomplete-mobile"
+              role="listbox"
+              aria-label="Product suggestions"
+              hidden
+            ></div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+    <main id="home">
+      <!-- =======================================================================
+         SECTION 2: HERO SECTION (2 Columns Desktop, Stacked on Mobile)
+         ======================================================================= -->
+      <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-row">
+            <!-- Column 1: Text, Value Proposition & CTA Buttons -->
+            <div class="hero-content">
+              <span class="hero-badge">
+                <i class="bi bi-sparkles" aria-hidden="true"></i>
+                Summer Lifestyle Collection 2026
+              </span>
+              <h1 id="hero-heading" class="hero-title">
+                Elevate Your Everyday
+                <span class="hero-title-highlight">Lifestyle.</span>
+              </h1>
+              <p class="hero-subtitle">
+                Discover curated collections of trend-forward apparel,
+                intelligent personal electronics, and artisanal home essentials
+                crafted for modern comfort.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#shop" class="btn-custom btn-primary-custom">
+                  Shop Now <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="#offer" class="btn-custom btn-secondary-custom">
+                  View Offers <i class="bi bi-tag" aria-hidden="true"></i>
+                </a>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="hero-trust-indicators">
+                <div class="trust-item">
+                  <i class="bi bi-shield-check" aria-hidden="true"></i>
+                  <span>Certified Quality</span>
+                </div>
+                <div class="trust-item">
+                  <i class="bi bi-truck" aria-hidden="true"></i>
+                  <span>Free Express Shipping</span>
+                </div>
+                <div class="trust-item">
+                  <i
+                    class="bi bi-star-fill text-warning"
+                    aria-hidden="true"
+                  ></i>
+                  <span>4.9/5 Rating (50k+ Reviews)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Hero Visual Showcase Card -->
+            <div class="hero-visual">
+              <div class="hero-card">
+                <img
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80"
+                  alt="Modern minimalist lifestyle boutique display featuring curated home goods, apparel, and gadgets"
+                  class="hero-image"
+                  width="600"
+                  height="440"
+                />
+                <div class="hero-floating-card">
+                  <div class="floating-card-info">
+                    <p class="floating-card-title">New Season Drops</p>
+                    <p>Over 250+ new arrivals added this week</p>
+                  </div>
+                  <span class="floating-badge">Up to 40% Off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 3: CATEGORY STRIP (4 Distinct Lifestyle Cards with Images & Labels)
+         ======================================================================= -->
+      <section
+        id="categories"
+        class="categories-section"
+        aria-labelledby="categories-heading"
+      >
+        <div class="container">
+          <header class="section-header">
+            <span class="section-tag">Explore Collections</span>
+            <h2 id="categories-heading" class="section-title">
+              Shop by Category
+            </h2>
+            <p class="section-subtitle">
+              Browse through our handpicked departments tailored to seamlessly
+              blend beauty, utility, and timeless design.
+            </p>
+          </header>
+
+          <div class="category-row">
+            <!-- Category 1: Fashion -->
+            <a
+              href="#shop"
+              class="category-card"
+              aria-label="Browse Fashion & Apparel"
+            >
+              <div class="category-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80"
+                  alt="Contemporary fashion apparel with soft neutral tones"
+                  class="category-image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <div class="category-overlay">
+                  <div class="category-info">
+                    <h3 class="category-label">Fashion</h3>
+                    <span class="category-count">1,240+ Products</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Category 2: Electronics -->
+            <a
+              href="#shop"
+              class="category-card"
+              aria-label="Browse Smart Electronics"
+            >
+              <div class="category-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                  alt="Premium wireless headphones resting on a minimalist surface"
+                  class="category-image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <div class="category-overlay">
+                  <div class="category-info">
+                    <h3 class="category-label">Electronics</h3>
+                    <span class="category-count">850+ Products</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Category 3: Home Decor -->
+            <a
+              href="#shop"
+              class="category-card"
+              aria-label="Browse Modern Home Decor"
+            >
+              <div class="category-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80"
+                  alt="Modern living room interior with Scandinavian style furniture and plants"
+                  class="category-image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <div class="category-overlay">
+                  <div class="category-info">
+                    <h3 class="category-label">Home Decor</h3>
+                    <span class="category-count">620+ Products</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Category 4: Beauty -->
+            <a
+              href="#shop"
+              class="category-card"
+              aria-label="Browse Beauty & Wellness"
+            >
+              <div class="category-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80"
+                  alt="Organic skincare cosmetic bottles with botanical leaves"
+                  class="category-image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <div class="category-overlay">
+                  <div class="category-info">
+                    <h3 class="category-label">Beauty & Care</h3>
+                    <span class="category-count">430+ Products</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 4: FEATURED PRODUCTS (CSS Grid: 4 Desktop, 2 Tablet, 1 Mobile)
+         ======================================================================= -->
+      <section
+        id="shop"
+        class="products-section"
+        aria-labelledby="products-heading"
+      >
+        <div class="container">
+          <header class="section-header">
+            <span class="section-tag">Bestsellers</span>
+            <h2 id="products-heading" class="section-title">
+              Featured Products
+            </h2>
+            <p class="section-subtitle">
+              Engineered for performance, aesthetics, and everyday reliability.
+              Discover our highest-rated customer favorites.
+            </p>
+          </header>
+
+          <!-- Active Search Results Filter Banner -->
+          <div id="search-filter-banner" class="search-filter-banner d-none" aria-live="polite"></div>
+
+          <!-- Zero Results Feedback Component -->
+          <div id="search-zero-results" class="search-zero-results d-none" aria-live="polite"></div>
+
+          <!-- CSS Grid Container for Product Cards -->
+          <div class="products-grid" id="products-grid">
+            <!-- Product Card 1 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag product-tag-popular">Popular</span>
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                  alt="Minimalist Chronograph Watch with stainless steel bezel and clean dial"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Accessories</span>
+                <h3 class="product-title">
+                  <a href="#product-1">Minimalist Chrono Watch</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.9 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <span class="rating-score">4.9</span>
+                  <span class="rating-count">(184)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$149.00</span>
+                  <span class="old-price">$199.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Minimalist Chrono Watch to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 2 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag">-25% OFF</span>
+                <img
+                  src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80"
+                  alt="Matte black wireless noise-cancelling headphones"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Electronics</span>
+                <h3 class="product-title">
+                  <a href="#product-2">Pro Wireless Headphones</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.8 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="rating-score">4.8</span>
+                  <span class="rating-count">(240)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$189.00</span>
+                  <span class="old-price">$249.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Pro Wireless Headphones to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 3 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag">Artisan</span>
+                <img
+                  src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80"
+                  alt="Handcrafted textured ceramic vase in warm terracotta and stone finish"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Home Decor</span>
+                <h3 class="product-title">
+                  <a href="#product-3">Artisanal Ceramic Vase</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.9 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="rating-score">4.9</span>
+                  <span class="rating-count">(95)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$48.00</span>
+                  <span class="old-price">$65.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Artisanal Ceramic Vase to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 4 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag product-tag-popular">Trending</span>
+                <img
+                  src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                  alt="Handmade Italian full-grain leather crossbody handbag in saddle brown"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Fashion</span>
+                <h3 class="product-title">
+                  <a href="#product-4">Italian Leather Crossbody</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 5.0 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="rating-score">5.0</span>
+                  <span class="rating-count">(112)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$165.00</span>
+                  <span class="old-price">$220.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Italian Leather Crossbody to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 5 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag">Bestseller</span>
+                <img
+                  src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80"
+                  alt="Custom mechanical keyboard with tactile switches and custom keycaps"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Electronics</span>
+                <h3 class="product-title">
+                  <a href="#product-5">Mechanical Work Keyboard</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.9 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <span class="rating-score">4.9</span>
+                  <span class="rating-count">(310)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$119.00</span>
+                  <span class="old-price">$159.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Mechanical Work Keyboard to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 6 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag">Smart Home</span>
+                <img
+                  src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80"
+                  alt="Contemporary dimmable LED desk lamp casting warm atmospheric illumination"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Home Decor</span>
+                <h3 class="product-title">
+                  <a href="#product-6">Ambient Smart Desk Lamp</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.7 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                  <span class="rating-score">4.7</span>
+                  <span class="rating-count">(88)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$79.00</span>
+                  <span class="old-price">$99.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Ambient Smart Desk Lamp to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 7 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag">Eco-Linen</span>
+                <img
+                  src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80"
+                  alt="Woven natural organic linen throw blanket folded neatly"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Home Living</span>
+                <h3 class="product-title">
+                  <a href="#product-7">Woven Organic Throw</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.8 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="rating-score">4.8</span>
+                  <span class="rating-count">(74)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$54.00</span>
+                  <span class="old-price">$72.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Woven Organic Throw to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+
+            <!-- Product Card 8 -->
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-tag product-tag-popular">Organic</span>
+                <img
+                  src="https://images.unsplash.com/photo-1608248597359-54845579d4cf?auto=format&fit=crop&w=600&q=80"
+                  alt="Botanical hydrating facial serum in glass dropper bottle"
+                  class="product-img"
+                  width="300"
+                  height="240"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Beauty</span>
+                <h3 class="product-title">
+                  <a href="#product-8">Botanical Glow Serum</a>
+                </h3>
+                <div
+                  class="product-rating"
+                  aria-label="Rated 4.9 out of 5 stars"
+                >
+                  <div class="stars" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <span class="rating-score">4.9</span>
+                  <span class="rating-count">(215)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="current-price">$38.00</span>
+                  <span class="old-price">$52.00</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart"
+                  aria-label="Add Botanical Glow Serum to cart"
+                >
+                  <i class="bi bi-cart-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- Fallback Featured Recommendations Section (Active on Zero Results) -->
+          <div id="search-fallback-featured" class="search-fallback-featured d-none">
+            <div class="fallback-header">
+              <span class="section-tag">Trending Recommendations</span>
+              <h3 class="fallback-title">You Might Also Love</h3>
+              <p class="fallback-subtitle">Explore our most popular customer favorites while you search.</p>
+            </div>
+            <div class="products-grid" id="fallback-products-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 5: OFFER BANNER (Flat 30% Promo Section with Action CTA)
+         ======================================================================= -->
+      <section id="offer" class="offer-section" aria-labelledby="offer-heading">
+        <div class="container">
+          <div class="offer-banner">
+            <div class="offer-content">
+              <span class="offer-pill">Limited Time Event</span>
+              <h2 id="offer-heading" class="offer-title">
+                Flat 30% OFF Everything
+              </h2>
+              <p class="offer-subtitle">
+                Refresh your wardrobe, elevate your home sanctuary, and
+                streamline your digital setup with our biggest mid-season
+                promotional sale.
+              </p>
+              <div
+                class="offer-coupon-box"
+                aria-label="Coupon Code Information"
+              >
+                <span>Use Voucher Code:</span>
+                <span class="coupon-code">NEST30</span>
+              </div>
+              <div>
+                <a href="#shop" class="btn-custom btn-accent-custom">
+                  Claim Discount Now
+                  <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 6: WHY CHOOSE US (4 Responsive Icon Boxes with Flexbox)
+         ======================================================================= -->
+      <section
+        id="why-us"
+        class="features-section"
+        aria-labelledby="why-us-heading"
+      >
+        <div class="container">
+          <header class="section-header">
+            <span class="section-tag">The ShopNest Promise</span>
+            <h2 id="why-us-heading" class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">
+              We prioritize customer satisfaction with seamless fulfillment,
+              high ethical standards, and uncompromising craftsmanship.
+            </p>
+          </header>
+
+          <div class="features-row">
+            <!-- Feature Box 1 -->
+            <div class="feature-box">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <i class="bi bi-truck"></i>
+              </div>
+              <h3 class="feature-title">Free Express Shipping</h3>
+              <p class="feature-description">
+                Complimentary carbon-neutral standard delivery on all domestic
+                orders exceeding $50.
+              </p>
+            </div>
+
+            <!-- Feature Box 2 -->
+            <div class="feature-box">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <i class="bi bi-arrow-counterclockwise"></i>
+              </div>
+              <h3 class="feature-title">Easy 30-Day Returns</h3>
+              <p class="feature-description">
+                Hassle-free, prepaid return labels with immediate refund or
+                direct product exchange options.
+              </p>
+            </div>
+
+            <!-- Feature Box 3 -->
+            <div class="feature-box">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <h3 class="feature-title">Secure Encrypted Payments</h3>
+              <p class="feature-description">
+                Bank-grade 256-bit SSL encryption supporting major credit cards,
+                Apple Pay, and Google Pay.
+              </p>
+            </div>
+
+            <!-- Feature Box 4 -->
+            <div class="feature-box">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <i class="bi bi-headset"></i>
+              </div>
+              <h3 class="feature-title">24/7 Dedicated Support</h3>
+              <p class="feature-description">
+                Our real, knowledgeable human customer care specialists are
+                available around the clock.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 7: TESTIMONIALS (3 Customer Review Cards with Flexbox)
+         ======================================================================= -->
+      <section
+        class="testimonials-section"
+        aria-labelledby="testimonials-heading"
+      >
+        <div class="container">
+          <header class="section-header">
+            <span class="section-tag">Real Experiences</span>
+            <h2 id="testimonials-heading" class="section-title">
+              Loved by Thousands
+            </h2>
+            <p class="section-subtitle">
+              Hear directly from discerning homeowners, tech lovers, and fashion
+              enthusiasts who trust ShopNest every day.
+            </p>
+          </header>
+
+          <div class="testimonials-row">
+            <!-- Testimonial Card 1 -->
+            <article class="testimonial-card">
+              <div
+                class="testimonial-stars"
+                aria-label="Rated 5 out of 5 stars"
+              >
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <blockquote class="testimonial-quote">
+                "The Italian leather crossbody bag and ceramic vase both arrived
+                impeccably packaged. The quality is truly designer-grade without
+                the inflated retail markup. Highly impressed!"
+              </blockquote>
+              <div class="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                  alt="Portrait of Sophia Martinez, verified customer"
+                  class="author-avatar"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <h3 class="author-name">Sophia Martinez</h3>
+                  <p>Verified Buyer, New York</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Testimonial Card 2 -->
+            <article class="testimonial-card">
+              <div
+                class="testimonial-stars"
+                aria-label="Rated 5 out of 5 stars"
+              >
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <blockquote class="testimonial-quote">
+                "As a software designer working from home, the mechanical
+                keyboard and smart desk lamp completely transformed my setup.
+                Fast 2-day delivery and flawless build quality."
+              </blockquote>
+              <div class="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                  alt="Portrait of David Chen, product designer and verified buyer"
+                  class="author-avatar"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <h3 class="author-name">David Chen</h3>
+                  <p>Product Designer, San Francisco</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Testimonial Card 3 -->
+            <article class="testimonial-card">
+              <div
+                class="testimonial-stars"
+                aria-label="Rated 5 out of 5 stars"
+              >
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <blockquote class="testimonial-quote">
+                "ShopNest strikes the rare sweet spot of minimalist beauty and
+                real functional durability. The 30% off promo made furnishing my
+                new apartment an absolute joy."
+              </blockquote>
+              <div class="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                  alt="Portrait of Emma Watson, interior stylist and customer"
+                  class="author-avatar"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <h3 class="author-name">Emma Watson</h3>
+                  <p>Interior Stylist, Chicago</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+         SECTION 8: NEWSLETTER (Email Input & Subscribe Button)
+         ======================================================================= -->
+      <section
+        id="newsletter"
+        class="newsletter-section"
+        aria-labelledby="newsletter-heading"
+      >
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-content">
+              <span class="section-tag section-tag-dark">Join The Club</span>
+              <h2 id="newsletter-heading" class="newsletter-title">
+                Get 15% Off Your First Order
+              </h2>
+              <p class="newsletter-subtitle">
+                Subscribe to the ShopNest insider newsletter for private
+                seasonal sales, curated editorial lookbooks, and early access to
+                limited edition drops.
+              </p>
+
+              <form class="newsletter-form" action="#subscribe" method="post">
+                <label for="newsletter-email" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  name="email"
+                  class="newsletter-input"
+                  placeholder="Enter your email address"
+                  required
+                  aria-required="true"
+                />
+                <button type="submit" class="btn-custom btn-primary-custom">
+                  Subscribe <i class="bi bi-send-fill" aria-hidden="true"></i>
+                </button>
+              </form>
+              <p class="newsletter-disclaimer">
+                <i class="bi bi-lock-fill" aria-hidden="true"></i> We respect
+                your privacy. No spam, ever. Unsubscribe with one click anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================================
+       SECTION 9: FOOTER (4 Link Columns, Social Icons, and Copyright Line)
+       ========================================================================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <!-- 4 Columns Link Grid (Flexbox Row on Desktop) -->
+        <div class="footer-top">
+          <!-- Column 1: Brand Info & Contact Details -->
+          <div class="footer-col">
+            <div class="footer-brand">
+              <a
+                href="#home"
+                class="brand-logo"
+                aria-label="ShopNest Footer Home"
+              >
+                <span class="brand-icon"
+                  ><i class="bi bi-shop-window" aria-hidden="true"></i
+                ></span>
+                <span>Shop<span class="brand-accent">Nest</span></span>
+              </a>
+            </div>
+            <p class="footer-desc">
+              ShopNest curates timeless fashion, intelligent home gadgets, and
+              sustainable interior decor to help you build an inspired everyday
+              environment.
+            </p>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> 100
+                Madison Ave, New York, NY 10016
+              </li>
+              <li>
+                <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                hello@shopnest.com
+              </li>
+              <li>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                <a href="tel:+18004566378">+1 (800) 456-6378</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Quick Shop Links -->
+          <div class="footer-col">
+            <h3 class="footer-heading">Shop Departments</h3>
+            <ul class="footer-links">
+              <li><a href="#shop">Apparel & Footwear</a></li>
+              <li><a href="#shop">Smart Electronics</a></li>
+              <li><a href="#shop">Modern Home Decor</a></li>
+              <li><a href="#shop">Beauty & Self-Care</a></li>
+              <li><a href="#offer">Seasonal Deals & Outlets</a></li>
+              <li><a href="#shop">New Season Arrivals</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Customer Care -->
+          <div class="footer-col">
+            <h3 class="footer-heading">Customer Care</h3>
+            <ul class="footer-links">
+              <li><a href="#track-order">Track My Order</a></li>
+              <li><a href="#shipping-policy">Shipping & Delivery Rates</a></li>
+              <li><a href="#returns">Returns & Exchange Portal</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
+              <li><a href="#warranty">Product Quality Guarantee</a></li>
+              <li><a href="#accessibility">Accessibility Statement</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: About & Company -->
+          <div class="footer-col">
+            <h3 class="footer-heading">Our Company</h3>
+            <ul class="footer-links">
+              <li><a href="#about-story">Our Story & Craft</a></li>
+              <li><a href="#sustainability">Sustainability Initiatives</a></li>
+              <li><a href="#careers">Careers & Culture</a></li>
+              <li><a href="#press">Press & Media Kit</a></li>
+              <li><a href="#affiliate">Creator & Affiliate Program</a></li>
+              <li><a href="#privacy">Privacy & Security Center</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom: Social Icons and Copyright Line -->
+        <div class="footer-bottom">
+          <div class="social-links" aria-label="Social media links">
+            <a
+              href="#instagram"
+              class="social-icon-btn"
+              aria-label="Follow ShopNest on Instagram"
+            >
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#twitter"
+              class="social-icon-btn"
+              aria-label="Follow ShopNest on X / Twitter"
+            >
+              <i class="bi bi-twitter-x" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#facebook"
+              class="social-icon-btn"
+              aria-label="Follow ShopNest on Facebook"
+            >
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#pinterest"
+              class="social-icon-btn"
+              aria-label="Follow ShopNest on Pinterest"
+            >
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#linkedin"
+              class="social-icon-btn"
+              aria-label="Follow ShopNest on LinkedIn"
+            >
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <p class="copyright-text">
+            &copy; 2026 ShopNest Lifestyle Retail Inc. All rights reserved.
+            Designed with pure HTML5 &amp; CSS3.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ShopNest Search Engine & Interactive UI Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

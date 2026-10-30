@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!------>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div>
+      <button>Pay Now</button>
+    </div> -->
+
+    <ul>
+      <li id="home">Home</li>
+      <li id="about">About</li>
+      <li id="contact">Contact</li>
+    </ul>
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+      // const divElement = document.querySelector("div");
+      // const buttonElement = document.querySelector("button");
+
+      const list = document.querySelector("ul");
+
+      // buttonElement.addEventListener("click", () => {
+      //   console.log("Button Ran!");
+      // });
+
+      // divElement.addEventListener("click", () => {
+      //   console.log("Div Ran!");
+      // });
+
+      const items = list.children;
+
+      list.addEventListener("click", (event) => {
+        console.log(event.target);
+        // if(event.target){
+
+        // }
+      });
+    </script>
+  </body>
+</html>

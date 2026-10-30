@@ -1,25 +1,42 @@
-import Account from "../schema/user.schema.js";
+import Account from "../schema/user.js";
 
-export async function CreateUserAccount(req, res) {
-  // Collection
-  const userData = req.body; // name , email , password
+export async function createUserAccount(req, res) {
   try {
-    // Data Validation
-    if (!userData) {
-      return res
-        .status(404)
-        .json({ message: "Please fill all the required fields!" });
-    }
-
-    // db : store user data
-    const queryRes = await Account.insertOne(userData);
-
-    res.json({ message: "User Account Created..", data: req.body });
+    const newUser = await Account.insertOne(req.body);
+    res.json(newUser);
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 }
 
-export async function RemoveUserAccount() {
-  console.log("User Account Removed!");
+export async function getUserProfile(req, res) {
+  try {
+    const profile = await Account.aggregate([
+      {
+        $match: {
+          email: {
+            $eq: "varun@gmail.com",
+          },
+        },
+      },
+      {
+        $project: {
+          name: 1,
+          email: 1,
+        },
+      },
+      {
+        $sort: {
+          name: 1,
+        },
+      },
+    ]);
+
+    res.json({
+      message: "Fetched filtered documents!",
+      data: profile,
+    });
+  } catch (error) {
+    res.json(error);
+  }
 }

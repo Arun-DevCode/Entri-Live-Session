@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speech Recognition</title>
+</head>
+<body>
+
+  <h1>Speech Recognition</h1>
+
+  <button id="startBtn">🎤 Start Speaking</button>
+
+  <p id="output">Your speech will appear here...</p>
+
+  <script>
+    const startBtn = document.getElementById("startBtn");
+    const output = document.getElementById("output");
+
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      output.textContent = "Speech Recognition is not supported in this browser.";
+    } else {
+      const recognition = new SpeechRecognition();
+
+      recognition.lang = "en-US";
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onstart = () => {
+        startBtn.textContent = "🎤 Listening...";
+      };
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+
+        output.textContent = transcript;
+        console.log("User said:", transcript);
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+      };
+
+      recognition.onend = () => {
+        startBtn.textContent = "🎤 Start Speaking";
+      };
+
+      startBtn.addEventListener("click", () => {
+        recognition.start();
+      });
+    }
+  </script>
+
+</body>
+</html>

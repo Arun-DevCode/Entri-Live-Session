@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabook - Get Started Your Exciting Journey With Us</title>
+  <meta name="description" content="Book your dream vacation with Trabook. Discover exclusive deals, custom travel plans, and top-rated destination packages worldwide.">
+  
+  <!-- Google Fonts: Volkhov for serif titles & Poppins for body/UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="Trabook Home">
+        Trabook<span class="logo-dot"></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#deals" class="nav-link">Destination</a></li>
+          <li class="nav-item"><a href="#vacation-plans" class="nav-link">Tour</a></li>
+          <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+        </ul>
+
+        <!-- Mobile Action Buttons (visible only on mobile/tablet drawer) -->
+        <div class="mobile-nav-actions mobile-only">
+          <a href="#login" class="btn-text mobile-login">Login</a>
+          <a href="#signup" class="btn btn-primary btn-signup mobile-signup">Sign up</a>
+        </div>
+      </nav>
+
+      <!-- Desktop Actions & Mobile Menu Toggle Button -->
+      <div class="nav-actions">
+        <a href="#login" class="btn-text desktop-only">Login</a>
+        <a href="#signup" class="btn btn-primary btn-signup desktop-only">Sign up</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navbar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Backdrop overlay when mobile menu is open -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="home">
+      <!-- Background decorative airplanes and dashed flight trails -->
+      <div class="flight-trails" aria-hidden="true">
+        <svg class="trail-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 680 140 C 780 60, 940 80, 1050 160 C 1140 230, 1180 340, 1100 440" stroke="#E5E7EB" stroke-width="1.8" stroke-dasharray="6 6"/>
+          <path d="M 640 220 C 720 180, 820 200, 900 270" stroke="#FA7436" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+        </svg>
+        <span class="fly-plane plane-1"><i class="fa-solid fa-plane"></i></span>
+        <span class="fly-plane plane-2"><i class="fa-solid fa-plane"></i></span>
+        <span class="fly-plane plane-3"><i class="fa-solid fa-plane"></i></span>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Left Column: Copy & CTA -->
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Get started your <br>
+            exciting <span class="text-primary">journey</span> <br>
+            with us.
+          </h1>
+          <p class="hero-desc">
+            A Team of experienced tour guides will help you find the best path for you to explore new places and make memorable memories.
+          </p>
+          <div class="hero-cta">
+            <a href="#booking" class="btn btn-outline">Discover Now</a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Graphic Composition & Floating Badges -->
+        <div class="hero-visual">
+          <div class="hero-circle-wrap">
+            <div class="hero-circle-glow"></div>
+            <div class="hero-circle-main">
+              <!-- Cheerful traveler image -->
+              <img 
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80" 
+                alt="Traveler with backpack, sunglasses, hat and camera" 
+                class="hero-traveler-img"
+                loading="eager"
+              >
+            </div>
+            
+            <!-- Floating Badge 1: Best Tour Guide -->
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon icon-trophy">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="badge-content">
+                <span class="badge-title">Best Tour</span>
+                <span class="badge-subtitle">Guide Awards</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Explore 24/7 Support -->
+            <div class="floating-badge badge-right">
+              <div class="badge-icon icon-location">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="badge-content">
+                <span class="badge-title">Explore</span>
+                <span class="badge-subtitle">Every Destination</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 3: Customer Satisfaction -->
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon icon-star">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="badge-content">
+                <div class="badge-rating-row">
+                  <span class="badge-bold">27k</span>
+                  <span class="badge-label">Customer</span>
+                </div>
+                <span class="badge-subtitle">Satisfied Reviews</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= FLOATING SEARCH / BOOKING BAR ================= -->
+      <div class="container booking-container" id="booking">
+        <div class="booking-card">
+          <!-- Field 1: Location -->
+          <div class="booking-field">
+            <div class="field-header">
+              <span class="field-title">Location</span>
+              <i class="fa-solid fa-chevron-down field-arrow"></i>
+            </div>
+            <input type="text" class="field-input" placeholder="Where are you going" aria-label="Destination location">
+          </div>
+          
+          <div class="booking-divider"></div>
+
+          <!-- Field 2: Date -->
+          <div class="booking-field">
+            <div class="field-header">
+              <span class="field-title">Date</span>
+              <i class="fa-solid fa-chevron-down field-arrow"></i>
+            </div>
+            <input type="text" class="field-input" placeholder="When you will go" onfocus="(this.type='date')" onblur="(this.type='text')" aria-label="Departure date">
+          </div>
+
+          <div class="booking-divider"></div>
+
+          <!-- Field 3: Guest -->
+          <div class="booking-field">
+            <div class="field-header">
+              <span class="field-title">Guest</span>
+              <i class="fa-solid fa-chevron-down field-arrow"></i>
+            </div>
+            <input type="text" class="field-input" placeholder="Number of guest" aria-label="Number of guests">
+          </div>
+
+          <!-- Submit Button -->
+          <div class="booking-btn-wrap">
+            <button type="button" class="btn btn-primary btn-explore" id="btnExplore">
+              Explore Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 1: EXCLUSIVE DEALS & DISCOUNTS ================= -->
+    <section class="section deals-section" id="deals">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            Exclusive <span class="text-primary">deals &amp; discounts</span>
+          </h2>
+          <p class="section-desc">
+            Discover our fantastic early booking discounts &amp; best deals on vacation tours
+          </p>
+        </div>
+
+        <div class="cards-grid deals-grid">
+          <!-- Deal Card 1: Madrid -->
+          <div class="deal-card">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=600&q=80" 
+                alt="Madrid historical monument arches" 
+                class="card-img"
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-city">Madrid</h3>
+                <div class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <div class="card-meta-row">
+                <span class="card-country"><i class="fa-solid fa-location-dot"></i> Spain</span>
+                <div class="card-pricing">
+                  <span class="old-price">$950</span>
+                  <span class="current-price">$850</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal Card 2: Firenzi (Featured Active Card) -->
+          <div class="deal-card deal-card-featured">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=600&q=80" 
+                alt="Firenzi Italian coastal landmark" 
+                class="card-img"
+              >
+              <a href="#booking" class="btn-book-now">Book Now</a>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-city">Firenzi</h3>
+                <div class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.5</span>
+                </div>
+              </div>
+              <div class="card-meta-row">
+                <span class="card-country"><i class="fa-solid fa-location-dot"></i> Italy</span>
+                <div class="card-pricing">
+                  <span class="old-price">$850</span>
+                  <span class="current-price">$750</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal Card 3: Paris -->
+          <div class="deal-card">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" 
+                alt="Paris romantic cityscape" 
+                class="card-img"
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-city">Paris</h3>
+                <div class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.4</span>
+                </div>
+              </div>
+              <div class="card-meta-row">
+                <span class="card-country"><i class="fa-solid fa-location-dot"></i> France</span>
+                <div class="card-pricing">
+                  <span class="old-price">$699</span>
+                  <span class="current-price">$599</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal Card 4: London -->
+          <div class="deal-card">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80" 
+                alt="London scenic landmark" 
+                class="card-img"
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-city">London</h3>
+                <div class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <div class="card-meta-row">
+                <span class="card-country"><i class="fa-solid fa-location-dot"></i> UK</span>
+                <div class="card-pricing">
+                  <span class="old-price">$850</span>
+                  <span class="current-price">$750</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <div class="slider-controls text-center">
+          <button class="slider-btn btn-prev" aria-label="Previous Deals">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="slider-btn btn-next active" aria-label="Next Deals">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: THINGS YOU NEED TO DO ================= -->
+    <section class="section features-section" id="about">
+      <div class="container relative-container">
+        <!-- Decorative subtle palm tree sketch -->
+        <div class="doodle-palm" aria-hidden="true">
+          <svg width="90" height="90" viewBox="0 0 100 100" fill="none" stroke="#D1D5DB" stroke-width="1.6" stroke-linecap="round">
+            <path d="M50 95 C 48 65, 52 40, 50 20"/>
+            <path d="M50 20 C 35 15, 20 25, 10 40"/>
+            <path d="M50 20 C 65 15, 80 25, 90 40"/>
+            <path d="M50 30 C 30 30, 20 45, 15 60"/>
+            <path d="M50 30 C 70 30, 80 45, 85 60"/>
+            <circle cx="85" cy="18" r="8" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            Things you need <span class="text-primary">to do</span>
+          </h2>
+          <p class="section-desc">
+            We ensure that you'll embark on a perfectly planned, safe vacation at a price you can afford.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1: Sign Up -->
+          <div class="feature-card feature-orange">
+            <div class="feature-icon-box">
+              <svg class="feature-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FA7436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <path d="m9 16 2 2 4-4"/>
+              </svg>
+              <div class="feature-wave wave-orange"></div>
+            </div>
+            <h3 class="feature-title">Sign Up</h3>
+            <p class="feature-desc">
+              Completes all the work associated with planning and processing seamlessly.
+            </p>
+          </div>
+
+          <!-- Feature 2: Worth of Money -->
+          <div class="feature-card feature-blue">
+            <div class="feature-icon-box">
+              <svg class="feature-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2B7FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/>
+                <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>
+              </svg>
+              <div class="feature-wave wave-blue"></div>
+            </div>
+            <h3 class="feature-title">Worth of Money</h3>
+            <p class="feature-desc">
+              After successful access then book from exclusive deals &amp; transparent pricing.
+            </p>
+          </div>
+
+          <!-- Feature 3: Exciting Travel -->
+          <div class="feature-card feature-amber">
+            <div class="feature-icon-box">
+              <svg class="feature-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+              </svg>
+              <div class="feature-wave wave-amber"></div>
+            </div>
+            <h3 class="feature-title">Exciting Travel</h3>
+            <p class="feature-desc">
+              Start and explore a wide range of exciting travel experiences around the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: BEST VACATION PLAN ================= -->
+    <section class="section vacation-section" id="vacation-plans">
+      <div class="container relative-container">
+        <!-- Decorative palm doodle -->
+        <div class="doodle-palm-right" aria-hidden="true">
+          <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="#E5E7EB" stroke-width="1.8">
+            <path d="M30 90 C 40 60, 45 40, 50 15"/>
+            <path d="M50 15 C 30 15, 15 25, 5 35"/>
+            <path d="M50 15 C 70 15, 85 25, 95 35"/>
+            <path d="M50 25 C 25 30, 15 45, 10 55"/>
+            <path d="M50 25 C 75 30, 85 45, 90 55"/>
+          </svg>
+        </div>
+
+        <div class="section-header-row">
+          <div class="section-header text-left">
+            <h2 class="section-title">
+              Best <span class="text-primary">vacation plan</span>
+            </h2>
+            <p class="section-desc">
+              Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive offers!
+            </p>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn btn-vacation-prev" aria-label="Previous vacation plan">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="slider-btn btn-vacation-next active" aria-label="Next vacation plan">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="cards-grid vacation-grid">
+          <!-- Vacation Plan 1: Rome, Italy -->
+          <div class="vacation-card">
+            <div class="vacation-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" 
+                alt="Rome Italy sunset view" 
+                class="vacation-img"
+              >
+            </div>
+            <div class="vacation-body">
+              <div class="vacation-title-row">
+                <h3 class="vacation-destination">Rome, Italy</h3>
+                <span class="vacation-price">$5,42k</span>
+              </div>
+              <div class="vacation-info-row">
+                <div class="vacation-duration">
+                  <i class="fa-solid fa-paper-plane text-primary"></i>
+                  <span>10 Days Trip</span>
+                </div>
+                <div class="vacation-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vacation Plan 2: London, UK -->
+          <div class="vacation-card">
+            <div class="vacation-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=800&q=80" 
+                alt="London UK architectural landmark" 
+                class="vacation-img"
+              >
+            </div>
+            <div class="vacation-body">
+              <div class="vacation-title-row">
+                <h3 class="vacation-destination">London, UK</h3>
+                <span class="vacation-price">$2,42k</span>
+              </div>
+              <div class="vacation-info-row">
+                <div class="vacation-duration">
+                  <i class="fa-solid fa-paper-plane text-primary"></i>
+                  <span>07 Days Trip</span>
+                </div>
+                <div class="vacation-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vacation Plan 3: Osaka, Japan -->
+          <div class="vacation-card">
+            <div class="vacation-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" 
+                alt="Osaka Japan peaceful resort and view" 
+                class="vacation-img"
+              >
+            </div>
+            <div class="vacation-body">
+              <div class="vacation-title-row">
+                <h3 class="vacation-destination">Osaka, Japan</h3>
+                <span class="vacation-price">$5,42k</span>
+              </div>
+              <div class="vacation-info-row">
+                <div class="vacation-duration">
+                  <i class="fa-solid fa-paper-plane text-primary"></i>
+                  <span>10 Days Trip</span>
+                </div>
+                <div class="vacation-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: TESTIMONIALS ================= -->
+    <section class="section testimonial-section">
+      <!-- Flight trail graphic behind testimonial -->
+      <div class="testimonial-trail" aria-hidden="true">
+        <svg width="400" height="200" viewBox="0 0 400 200" fill="none">
+          <path d="M 20 180 C 120 40, 260 20, 380 90" stroke="#E5E7EB" stroke-width="1.8" stroke-dasharray="6 6"/>
+          <path d="M 380 90 L 375 80 M 380 90 L 370 92" stroke="#E5E7EB" stroke-width="1.8"/>
+        </svg>
+      </div>
+
+      <div class="container testimonial-container">
+        <!-- Testimonial Left: Heading & Nav -->
+        <div class="testimonial-content">
+          <h2 class="section-title testimonial-title">
+            What people say <br>
+            <span class="text-primary">about us.</span>
+          </h2>
+          <p class="section-desc testimonial-desc">
+            Our Clients send us bunch of smilies with our services and we love them.
+          </p>
+          <div class="slider-controls testimonial-controls">
+            <button class="slider-btn btn-test-prev" id="btnTestPrev" aria-label="Previous Testimonial">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="slider-btn btn-test-next active" id="btnTestNext" aria-label="Next Testimonial">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Testimonial Right: Stacked Cards -->
+        <div class="testimonial-cards-wrapper">
+          <!-- Background Stacked Ghost Card -->
+          <div class="testimonial-card card-stacked-back" id="cardBack">
+            <div class="author-info">
+              <h4 class="author-name">Chris Thomas</h4>
+              <p class="author-role">CEO of Red Button</p>
+            </div>
+          </div>
+
+          <!-- Foreground Active Card -->
+          <div class="testimonial-card card-active" id="cardFront">
+            <div class="testimonial-avatar">
+              <img 
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" 
+                alt="Mike Taylor client portrait" 
+                id="testimonialAvatar"
+              >
+            </div>
+            <blockquote class="testimonial-quote" id="testimonialQuote">
+              “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+            </blockquote>
+            <div class="author-info">
+              <h4 class="author-name" id="testimonialAuthor">Mike Taylor</h4>
+              <p class="author-role" id="testimonialLocation">Lahore, Pakistan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: LATEST BLOG ================= -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            Get update with <span class="text-primary">latest blog</span>
+          </h2>
+        </div>
+
+        <div class="cards-grid blog-grid">
+          <!-- Blog Card 1 -->
+          <article class="blog-card">
+            <div class="blog-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" 
+                alt="Charming historical building with balconies" 
+                class="blog-img"
+              >
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-headline">
+                <a href="#blog">The Amazing Difference a Year of Travelling.</a>
+              </h3>
+              <time datetime="2021-07-27" class="blog-date">July 27, 2021</time>
+            </div>
+          </article>
+
+          <!-- Blog Card 2 -->
+          <article class="blog-card">
+            <div class="blog-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" 
+                alt="Tropical beach gazebo overlooking turquoise water" 
+                class="blog-img"
+              >
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-headline">
+                <a href="#blog">Travel Images You Can't Look Away From.</a>
+              </h3>
+              <time datetime="2021-07-27" class="blog-date">July 27, 2021</time>
+            </div>
+          </article>
+
+          <!-- Blog Card 3 -->
+          <article class="blog-card">
+            <div class="blog-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" 
+                alt="European ancient brick colonnade corridor" 
+                class="blog-img"
+              >
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-headline">
+                <a href="#blog">Reflections on 5 Months of Travel: Time to Sleep.</a>
+              </h3>
+              <time datetime="2021-07-27" class="blog-date">July 27, 2021</time>
+            </div>
+          </article>
+
+          <!-- Blog Card 4 -->
+          <article class="blog-card">
+            <div class="blog-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" 
+                alt="Scenic mountain valley road trip" 
+                class="blog-img"
+              >
+            </div>
+            <div class="blog-body">
+              <h3 class="blog-headline">
+                <a href="#blog">How to Save Money While Traveling Abroad.</a>
+              </h3>
+              <time datetime="2021-07-27" class="blog-date">July 27, 2021</time>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog Pagination Dots -->
+        <div class="blog-pagination">
+          <button class="dot" aria-label="Blog page 1"></button>
+          <button class="dot active" aria-label="Blog page 2"></button>
+          <button class="dot" aria-label="Blog page 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6: NEWSLETTER CTA ================= -->
+    <section class="section newsletter-section">
+      <div class="container">
+        <div class="newsletter-banner">
+          <!-- Circular decorative ripples on the left -->
+          <div class="newsletter-rings" aria-hidden="true">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+
+          <!-- Top-right palm leaf doodle -->
+          <div class="newsletter-doodle" aria-hidden="true">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2">
+              <path d="M20 80 C 40 50, 55 35, 80 15"/>
+              <path d="M80 15 C 60 18, 45 30, 35 45"/>
+              <path d="M80 15 C 80 35, 75 55, 65 70"/>
+              <path d="M60 25 C 45 35, 40 50, 40 65"/>
+            </svg>
+          </div>
+
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">
+              Subscribe and get exclusive <br>
+              deals &amp; offer
+            </h2>
+
+            <form class="newsletter-form" id="newsletterForm" onsubmit="return false;">
+              <div class="newsletter-input-box">
+                <i class="fa-regular fa-envelope input-icon"></i>
+                <input 
+                  type="email" 
+                  class="newsletter-input" 
+                  placeholder="Enter your mail" 
+                  required 
+                  aria-label="Email address for newsletter"
+                >
+                <button type="submit" class="btn btn-primary btn-newsletter">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info Column -->
+        <div class="footer-col brand-col">
+          <a href="#" class="logo footer-logo" aria-label="Trabook Home">
+            Trabook<span class="logo-dot"></span>
+          </a>
+          <p class="footer-tagline">
+            Book your trip in minute, get full <br>Control for much longer.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon active" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Link Column 1: Company -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#logistic">Logistic</a></li>
+            <li><a href="#privacy">Privacy &amp; Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Link Column 2: Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-nav">
+            <li><a href="#faq">Help/FAQ</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#affiliates">Affiliates</a></li>
+          </ul>
+        </div>
+
+        <!-- Link Column 3: More -->
+        <div class="footer-col">
+          <h4 class="footer-heading">More</h4>
+          <ul class="footer-nav">
+            <li><a href="#press-centre">Press Centre</a></li>
+            <li><a href="#blog">Our Blog</a></li>
+            <li><a href="#low-fare">Low fare tips</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright Bar -->
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2022 Trabook. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#terms">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="main.js"></script>
+</body>
+</html>

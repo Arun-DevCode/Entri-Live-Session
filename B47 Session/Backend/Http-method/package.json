@@ -1,0 +1,13 @@
+{
+  "name": "http-method",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "Entri App",
+  "license": "ISC",
+  "type": "commonjs"
+}

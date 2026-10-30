@@ -11,7 +11,7 @@ import Products from "../pages/Products";
 import UsersPage from "../pages/users";
 
 // Import function : Loader
-import { fetchUsers } from "../api/users";
+import { fetchUsers, formSubmission } from "../api/users";
 
 // Router Config
 const AppRouter = createBrowserRouter([
@@ -40,6 +40,7 @@ const AppRouter = createBrowserRouter([
   {
     path: "/post",
     element: <PostPage />,
+    errorElement: <h1>Component Not rendered!</h1>,
   },
   {
     path: "/post/:postId",
@@ -54,6 +55,7 @@ const AppRouter = createBrowserRouter([
     path: "/user",
     element: <UsersPage />,
     loader: fetchUsers,
+    action: formSubmission,
   },
 ]);
 

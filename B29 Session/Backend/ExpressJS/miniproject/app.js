@@ -1,8 +1,8 @@
 import express from "express";
 
 // Import Routes
-// import AuthRouter from "./src/routes/auth.route.js";
-import UserRouter from "./src/routes/user.route.js";
+import AuthRouter from "./src/routes/auth.route.js";
+// import UserRouter from "./src/routes/user.route.js";
 // import BookingRouter from "./src/routes/booking.route.js";
 // import ProductRouter from "./src/routes/product.route.js";
 
@@ -21,18 +21,18 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json("Welcome to server");
 });
-
+w
 // Auth Routes
 
 // Global Rate limiter
 app.use(globalLimiter);
 
 // Private Routes
-// app.use("/api/auth", strictLimiter, AuthRouter);
+app.use("/api/auth", strictLimiter, AuthRouter);
 // app.use("/api/booking", strictLimiter, BookingRouter);
 
 // Public Routes
-app.use("/api/auth", UserRouter);
+app.use("/api/auth", AuthRouter);
 // app.use("/api/product", ProductRouter);
 
 export default app;
