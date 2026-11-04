@@ -1,10 +1,13 @@
-import Searchbar from "./components/searchbar";
+// import ProductPage from "./pages/ProductPage";
+// import Users from "./pages/Users";
+import SignUpForm from "./components/register/SignUpForm";
 
 export default function App() {
-  
   return (
-    <div>
-      <Searchbar />
-    </div>
+    <>
+      {/* <ProductPage /> */}
+      {/* <Users /> */}
+      <SignUpForm />
+    </>
   );
 }
