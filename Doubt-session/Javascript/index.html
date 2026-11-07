@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--Form styles-->
+    <style>
+      .errorField {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Register:Form-->
+    <form action="#">
+      <!--Name-->
+      <div>
+        <label for="Name">Name</label>
+        <input type="text" name="name" placeholder="e.g John Doe" />
+        <!--Error:Field-->
+        <span id="nameError" class="errorField"></span>
+      </div>
+      <!--Email-->
+      <div>
+        <label for="Email">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="e.g abc@gmail.com"
+          required
+        />
+        <!--Error:Field-->
+        <span id="emailError" class="errorField"></span>
+      </div>
+      <!--Password-->
+      <div>
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="e.g abc123"
+          required
+        />
+        <!--Error:Field-->
+        <span class="errorField" id="passwordError"></span>
+      </div>
+
+      <!--Submit Button-->
+      <button type="submit">Create Account</button>
+    </form>
+    <script src="script.js" />
+  </body>
+</html>
