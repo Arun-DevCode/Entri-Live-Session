@@ -92,6 +92,7 @@ export default function SignUpForm() {
                 value: true,
                 message: "Phone number is require!",
               },
+
               validate: {
                 hasNumber: (val) => /\d/.test(val) || "Incorrect Phone Number!",
               },
@@ -113,17 +114,17 @@ export default function SignUpForm() {
                 message: "Password is required!",
               },
               deps: ["confirmPassword"],
-              // min: {
-              //   value: 8,
-              //   message: "Password should be 8 or above characters!!",
-              // },
-              // validate: {
-              //   hasNumber: (val) => /\d/.test(val) || "Include number [0-9]",
-              //   hasUpper: (val) =>
-              //     val.toUpperCase() || "Include capital letters [A-Z]",
-              //   hasLower: (val) =>
-              //     val.toLowerCase() || "Include small letters [a-z]",
-              // },
+              min: {
+                value: 8,
+                message: "Password should be 8 or above characters!!",
+              },
+              validate: {
+                hasNumber: (val) => /\d/.test(val) || "Include number [0-9]",
+                hasUpper: (val) =>
+                  val.toUpperCase() || "Include capital letters [A-Z]",
+                hasLower: (val) =>
+                  val.toLowerCase() || "Include small letters [a-z]",
+              },
             })}
           />
           {/* Error Display */}
