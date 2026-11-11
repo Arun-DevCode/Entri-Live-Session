@@ -7,6 +7,13 @@ import Category from "../pages/Category";
 import settings from "../pages/settings";
 import ProfilePage from "../pages/ProfilePage";
 import Backup from "../pages/Backup";
+import AlbumsPage from "../pages/AlbumsPage";
+
+// Import Loaders
+import { getAllPhotos } from "../helper/loaders/albums";
+
+// Import Action
+import { CreateAlbums } from "../helper/actions/albumsAction";
 
 //* App Router Config
 const AppRouter = createBrowserRouter([
@@ -33,6 +40,12 @@ const AppRouter = createBrowserRouter([
         Component: Backup,
       },
     ],
+  },
+  {
+    path: "/albums/:id",
+    Component: AlbumsPage,
+    // loader: getAllPhotos,
+    action: CreateAlbums,
   },
   //   {
   //     path: "/:category",
