@@ -1,9 +1,17 @@
-// import {useRef} from 'react'
+import { ProductProvider } from "./context";
+
+
+// Import components
+import CartPage from "./components/CartPage";
+import PaymentPage from "./components/Payment";
 
 export default function App() {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      <ProductProvider>
+        <CartPage />
+        <PaymentPage />
+      </ProductProvider>
+    </>
+  );
 }
