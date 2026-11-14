@@ -1,27 +1,28 @@
-const { createNewUser } = require("../services/user.services");
-const db = require("../schema/db");
+const {
+  createNewUser,
+  getAllUsers,
+  getUser,
+} = require("../services/user.services");
 
-function getAllUserAccount(req, res) {
-  // const id = req.params.profileId;
+async function getAllAccounts(req, res) {
+  try {
+    // Get all users
+    const accounts = await getAllUsers();
+    if (!accounts.success) {
+      throw new Error("No accounts found!. Create a account");
+    }
 
-  // Validation
-  // if (!id) {
-  //   return res.status(404).json({ message: "Provide valid user id!!" });
-  // }
-
-  // get : specific user data
-  // const user = db[id];
-
-  // Query : Logic
-  const searchKeywords = req.query;
-  const isUserFound = searchKeywords.filter((user) => user.name === "kumar");
-
-  res.json({ message: "No Users found!", user: isUserFound });
+    // Respond
+    res
+      .json({ message: "fetched accounts success..", accounts: accounts.users })
+      .status(200);
+  } catch (err) {
+    return res.status(404).json({ message: err.message });
+  }
 }
 
-function createUserAccount(req, res) {
+async function createUserAccount(req, res) {
   const data = req.body; // Data Receive
-
   // Validation
   if (!data) {
     return res.status(404).json({
@@ -31,14 +32,29 @@ function createUserAccount(req, res) {
   }
 
   // DB : Store
-  createNewUser(data);
+  const newUser = await createNewUser(data);
+  if (!newUser) {
+    return res.json({ message: "Can't Create an account. Try again later!" });
+  }
 
   // Respond
-  res.json({ message: "User Account Created..", users: data });
+  res.json({ message: "User Account Created..", users: newUser });
 }
 
-function UpdateUserAccount(req, res) {
-  res.json({ message: "Updated User Account.." });
+async function UpdateUserAccount(req, res) {
+  try {
+    // Get AccountId
+    const { accountId } = req.params;
+    if (!accountId) {
+      throw new Error("Please login again!");
+    }
+
+    // check account exist
+    const isAccountFound = await getUser(accountId ?? null);
+    console.log(isAccountFound);
+  } catch (err) {
+    return res.status(404).json({ message: err.message, success: false });
+  }
 }
 
 function forgetPassword(req, res) {
@@ -50,7 +66,7 @@ function DeactiveAccount(req, res) {
 }
 
 module.exports = {
-  getAllUserAccount,
+  getAllAccounts,
   createUserAccount,
   UpdateUserAccount,
   forgetPassword,
