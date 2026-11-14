@@ -4,24 +4,22 @@ export default function CounterPage() {
   // Create Group : Reducer
   function reducer(state, action) {
     const type = action.type;
-
     switch (type) {
       case "increment":
-        state + 1; // logic
-        break;
+        return (state = state + 1); // logic
       case "decrement":
-        state - 1;
-        break;
+        return (state = state>0 ? state-=1:state);
       case "reset":
-        state = 0;
-        break;
+        return state = 0;
       default:
         console.log("Please do right action!");
     }
   }
 
+  const initialState = 0;
+
   // Declare
-  const [count, dispatch] = useReducer(reducer, 0);
+  const [count, dispatch] = useReducer(reducer, initialState);
   // const [value , setVal] = useState(0)
 
   //  function increment(){
@@ -37,7 +35,7 @@ export default function CounterPage() {
     <>
       <h1>{count}</h1>
       <div>
-        <button onClick={() => dispatch({ type: "increment", payload: 5 })}>
+        <button onClick={() => dispatch({ type: "increment" })}>
           Increment
         </button>
         <button onClick={() => dispatch({ type: "decrement" })}>
