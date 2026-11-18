@@ -6,6 +6,7 @@ export const ProductContext = createContext([]);
 
 // Provider
 export function ProductProvider(props) {
+  // const [] = useState()
   //* to get all photos
   const albums = useFetch("https://jsonplaceholder.typicode.com/photos");
   console.table(albums);

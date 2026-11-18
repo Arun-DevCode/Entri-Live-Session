@@ -7,6 +7,7 @@ export default function Field({
   validation,
   error,
   options = [],
+  val,
 }) {
   const isCheckbox = type === "checkbox";
   const controlClass = isCheckbox
@@ -23,7 +24,9 @@ export default function Field({
   };
 
   return (
-    <div className={`signup-field${isCheckbox ? " signup-field--checkbox" : ""}`}>
+    <div
+      className={`signup-field${isCheckbox ? " signup-field--checkbox" : ""}`}
+    >
       {isCheckbox ? (
         <div className="form-check">
           <input type="checkbox" className={controlClass} {...controlProps} />
@@ -50,6 +53,7 @@ export default function Field({
               type={type}
               className={controlClass}
               placeholder={placeholder}
+              value={val}
               {...controlProps}
             />
           )}

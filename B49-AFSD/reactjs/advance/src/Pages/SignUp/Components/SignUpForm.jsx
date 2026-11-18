@@ -15,7 +15,7 @@ import "./SignUpForm.css";
 // API
 import { registerUser } from "../../../api/users/signup";
 
-export default function SignUpForm() {
+export default function SignUpForm({ details }) {
   const {
     register,
     handleSubmit,
@@ -23,11 +23,11 @@ export default function SignUpForm() {
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
-      name: "",
-      email: "",
+      name: details.name ?? "",
+      email: details.email ?? "",
       phone: "",
       gender: "",
-      password: "",
+      password: details.password ?? "",
       confirmPassword: "",
       terms: false,
     },
@@ -81,6 +81,7 @@ export default function SignUpForm() {
               reg={register}
               validation={nameValidation}
               error={errors.name}
+              val={details.name}
             />
             <Field
               type="email"
