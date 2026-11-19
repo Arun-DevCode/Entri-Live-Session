@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config(); // Load Env Variable
 
 // Import: Router
 const UserRouter = require("./routers/index");
@@ -13,8 +14,5 @@ app.use(express.json()); // Body Parser
 // Routers
 app.use("/api/user", UserRouter);
 app.use("/api/product", ProductRouter);
-// app.use("/api/post", checkPermission, (req, res) => {
-//   console.log("Post created!");
-// });
 
 module.exports = app;

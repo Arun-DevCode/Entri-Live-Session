@@ -4,6 +4,9 @@ const {
   getUser,
 } = require("../services/user.services");
 
+// Security
+const { genSignToken } = require("../utils/auth");
+
 async function getAllAccounts(req, res) {
   try {
     // Get all users
@@ -41,24 +44,41 @@ async function createUserAccount(req, res) {
   res.json({ message: "User Account Created..", users: newUser });
 }
 
-async function UpdateUserAccount(req, res) {
+// Login
+async function loginAccount(req, res) {
   try {
-    // Get AccountId
-    const { accountId } = req.params;
-    if (!accountId) {
-      throw new Error("Please login again!");
+    // Validate Data
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(404).json({
+        Code: "USER_DATA_NOT_FOUND",
+        message: "Fill all the require fields",
+      });
     }
 
-    // check account exist
-    const isAccountFound = await getUser(accountId ?? null);
-    console.log(isAccountFound);
+    // check user account exits
+    const isAccountFound = await getUser(email);
+    if (!isAccountFound) throw new Error("No User Found!");
+
+    // Generate accessToken
+    const accessToken = await genSignToken(isAccountFound);
+    if (!accessToken)
+      throw new Error("Failed to login. Please try again later!");
+
+    // Response
+    res.status(200).json({
+      success: true,
+      message: "User LoggedIn Success..",
+      accessKey : accessToken
+    });
   } catch (err) {
-    return res.status(404).json({ message: err.message, success: false });
+    console.log(err.message);
+    res.status(400).json({ code: "ERR_TOKEN_GEN", message: err.message });
   }
 }
 
 function forgetPassword(req, res) {
-  res.json({ message: "Password Updated.." });
+  res.json({ message: "Password Updated..", user : req.body });
 }
 
 function DeactiveAccount(req, res) {
@@ -68,7 +88,7 @@ function DeactiveAccount(req, res) {
 module.exports = {
   getAllAccounts,
   createUserAccount,
-  UpdateUserAccount,
+  loginAccount,
   forgetPassword,
   DeactiveAccount,
 };

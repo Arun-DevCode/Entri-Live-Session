@@ -1,17 +1,23 @@
 const User = require("../models/user.model");
+const {genHash} = require("../utils/auth")
 
 async function createNewUser(user) {
-  console.log(user);
   try {
+    // valid data
     if (!user) {
       return null;
     }
-
+    //Generate Hash
+    const hashedPassword = await genHash(user.password)
+    
     // Create a new user
-    const res = await User.insertOne(user);
-    console.log(res);
+    const res = await User.insertOne({...user, password : hashedPassword});
+    if(!res) throw new Error("Failed to Create account! Try again later")
+    
     return res;
-  } catch (error) {}
+  } catch (error) {
+    return error
+  }
 }
 
 async function getAllUsers() {
@@ -28,12 +34,13 @@ async function getAllUsers() {
   }
 }
 
-async function getUser(userId) {
+async function getUser(email) {
   try {
     // check user exist
-    const isUserExist = await User.findOne({ _id: userId }).select(
-      "name email password",
-    );
+    const isUserExist = await User.findOne({ email }).select(
+      "email",
+    ).lean();
+    
     if (!isUserExist) {
       throw new Error("No User Found!");
     }
@@ -42,4 +49,5 @@ async function getUser(userId) {
     return { success: false, message: err.message };
   }
 }
+
 module.exports = { createNewUser, getAllUsers, getUser };
